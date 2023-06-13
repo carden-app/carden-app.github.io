@@ -1,64 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
     <title>Carden</title>
     <style>
-      :root {
-        --green: rgb(39, 243, 214);
-        --black: rgb(31, 31, 31);
+      @font-face {
+        font-family: "Onest";
+        src: url("assets/onest/WOFF/Onest-Regular.woff");
+        font-weight: 700;
+      }
+      @font-face {
+        font-family: "Onest";
+        src: url("assets/onest/WOFF/Onest-Thin.woff");
+        font-weight: 300;
+      }
+
+      body,
+      h1,
+      p {
+        margin: 0;
+        padding: 0;
       }
       body {
-        overflow-x: hidden;
+        height: 100vh;
+        width: 100%;
         padding: 0;
         margin: 0;
-        width: 100vw;
-        min-height: 100vh;
-        background-image:linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%), url("assets/background.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        background: linear-gradient(
+          179.73deg,
+          #cf95fb 3.11%,
+          #ffefd8 48.03%,
+          #ffefd8 60.5%,
+          #0073ff 113.79%
+        );
+      }
+      header,
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       header {
-        padding-top: 1rem;
-        padding-left: 2rem;
+        flex: 1;
       }
-      article {
-        max-width: 900px;
-        width: 90%;
-        margin:auto;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
+      footer {
+        margin-bottom: 3rem;
+        justify-content: flex-end;
       }
-      article img {
-        max-width: 90vw;
+      h1 {
+        font-family: "Onest";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 123.754px;
+        line-height: 89px;
+        text-align: center;
+        color: #150b3d;
+      }
+      header p {
+        font-family: "Onest";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 61.5702px;
+        line-height: 89px;
+        text-align: center;
+        color: #150b3d;
+      }
+      footer p {
+        text-align: center;
+        font-family: "Onest";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 42.9476px;
+        line-height: 78px;
+        color: #ffffff;
+      }
+      footer a {
+        text-align: center;
+        font-family: "Onest";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 89px;
+        text-decoration-line: underline;
+        color: #150b3d;
       }
     </style>
   </head>
   <body>
     <header>
-      <img src="assets/logo-carden.svg" alt="carden"/>
+      <h1>Carden</h1>
+      <p>Comming soon</p>
     </header>
 
-    <article>
-      <img src="assets/comming-soon.svg" alt="comming-soon"/>
-      <img src="assets/visuel-hero.svg" alt="visual demo" />
-    </article>
+    <footer>
+      <p>Prendre soin de soi n’a jamais été aussi simple</p>
+      <a href="mailto:contact@carden.app">contact@carden.app</a>
+    </footer>
   </body>
 </html>
