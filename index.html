@@ -85,7 +85,9 @@
         font-size: max(18px, 2.5vw);
         color: #ffffff;
         margin-bottom: 1rem;
+        min-width: 20vw;
       }
+
       footer a {
         text-align: center;
         font-family: "Onest";
@@ -94,6 +96,12 @@
         font-size: max(18px,1.5vw);
         text-decoration-line: underline;
         color: #150b3d;
+      }
+
+      @media screen  and (max-width: 400px){
+        footer p {
+        white-space: pre-line;
+        }
       }
     </style>
   </head>
@@ -104,7 +112,10 @@
     </header>
 
     <footer>
-      <p>Prendre soin de soi n’a jamais été aussi simple</p>
+      <p>
+        Prendre soin de soi
+        n’a jamais été aussi simple
+      </p>
       <a href="mailto:contact@carden.app">contact@carden.app</a>
     </footer>
   </body>
