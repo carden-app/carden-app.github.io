@@ -1,122 +1,4987 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <title>Carden</title>
-    <style>
-      @font-face {
-        font-family: "Onest";
-        src: url("assets/onest/WOFF/Onest-Bold.woff");
-        font-weight: 700;
-      }
-      @font-face {
-        font-family: "Onest";
-        src: url("assets/onest/WOFF/Onest-Thin.woff");
-        font-weight: 300;
-      }
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+06/08/2023 10:09:43 -->
 
-      body,
-      h1,
-      p {
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        height: 100%;
-      }
-      body {
-        height: 100%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: linear-gradient(
-          179.73deg,
-          #cf95fb 3.11%,
-          #ffefd8 48.03%,
-          #ffefd8 60.5%,
-          #0073ff 113.79%
-        );
-      }
-      header,
-      footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      header {
-        flex: 1;
-      }
-      footer {
-        margin-bottom: 3rem;
-        justify-content: flex-end;
-      }
-      h1 {
-        font-family: "Onest";
-        font-style: normal;
-        font-weight: 700;
-        font-size: max(54.8653px, 8vw);
-        text-align: center;
-        color: #150b3d;
-      }
-      header p {
-        font-family: "Onest";
-        font-style: normal;
-        font-weight: 300;
-        font-size: max(27.2967px, 4vw);
-        text-align: center;
-        color: #150b3d;
-      }
-      footer p {
-        text-align: center;
-        font-family: "Onest";
-        font-style: normal;
-        font-weight: 400;
-        font-size: max(18px, 2.5vw);
-        color: #ffffff;
-        margin-bottom: 1rem;
-        min-width: 20vw;
-      }
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 
-      footer a {
-        text-align: center;
-        font-family: "Onest";
-        font-style: normal;
-        font-weight: 300;
-        font-size: max(18px,1.5vw);
-        text-decoration-line: underline;
-        color: #150b3d;
-      }
+@import url("https://fonts.googleapis.com/css?family=Roboto:700|Inter:500,700,400");
 
-      @media screen  and (max-width: 400px){
-        footer p {
-        white-space: pre-line;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Carden</h1>
-      <p>Coming soon</p>
-    </header>
 
-    <footer>
-      <p>
-        Prendre soin de soi
-        n’a jamais été aussi simple
-      </p>
-      <a href="mailto:contact@carden.app">contact@carden.app</a>
-    </footer>
-  </body>
-</html>
+@font-face {
+  font-family: "Onest-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/641ec592d89cb34153f43b89/fonts/onestmedium1602-hint.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Onest-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/62cbd8bdb9d72d70fcf63eb5/fonts/onestbold1602-hint.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Carmen Sans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/5f1137ea1e2a47ced8dd7280/Carmen Sans Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Onest-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/641ec592d89cb34153f43b89/fonts/onestextrabold1602-hint.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Onest-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/641ec592d89cb34153f43b89/fonts/onestregular1602-hint.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Carmen Sans-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/5f1137ea1e2a47ced8dd7280/Carmen Sans Medium.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Carmen Sans-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/64395e202bf36e699266ace5/fonts/carmen-sans-bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Carmen Sans-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/5f1137ea1e2a47ced8dd7280/Carmen Sans Bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Futura-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://anima-uploads.s3.amazonaws.com/5c4f3d2d5fa7fe000bf60bb8/futura.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Carmen Sans-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/607e8a13037b20d9246456d6/fonts/carmen-sans-light.otf') format("opentype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/64ce733974252cafed7b5efc.64ce733a74252cafed7b5eff.8G8R4OY.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --azure-radiance: #0073ff;
+  --black: #000000;
+  --blue: #3177ff;
+  --colorsecondary400: #939393;
+  --dark--dark-0: #1c1c28;
+  --dark--dark-4: #c7c8d8;
+  --dove-gray: #6f6f6f;
+  --log-cabin: #212121;
+  --neutral-colors--100: #ffffff;
+  --neutral-colors200: #f9fafa;
+  --neutral-colors300: #dfe5e7;
+  --neutral-colors700: #24292b;
+  --neutral-colors800: #090419;
+  --oil: #261d17;
+  --primary-colorscolor-1: #1b5bff;
+  --primary-colorscolor-2: #cf95fb;
+  --primary-colorscolor-6: #150b3d;
+  --wild-sand: #f4f4f4;
+ 
+  --font-size-54px: 54px;
+  --font-size-l: 20px;
+  --font-size-m: 18px;
+  --font-size-s: 16px;
+  --font-size-xl: 24px;
+  --font-size-xs: 14px;
+  --font-size-xxl: 56px;
+  --font-size-xxs: 10.1px;
+ 
+  --font-family-carmen_sans-bold: "Carmen Sans-Bold", Helvetica;
+  --font-family-carmen_sans-extrabold: "Carmen Sans-ExtraBold", Helvetica;
+  --font-family-carmen_sans-light: "Carmen Sans-Light", Helvetica;
+  --font-family-carmen_sans-medium: "Carmen Sans-Medium", Helvetica;
+  --font-family-carmen_sans-regular: "Carmen Sans-Regular", Helvetica;
+  --font-family-futura-medium: "Futura-Medium", Helvetica;
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-onest-bold: "Onest-Bold", Helvetica;
+  --font-family-onest-extrabold: "Onest-ExtraBold", Helvetica;
+  --font-family-onest-medium: "Onest-Medium", Helvetica;
+  --font-family-onest-regular: "Onest-Regular", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.special-headingsdisplay-2 {
+  font-family: var(--font-family-onest-bold);
+  font-size: var(--font-size-54px);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.headingstypography-size-5 {
+  font-family: var(--font-family-onest-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.headingstypography-size-6 {
+  font-family: var(--font-family-onest-bold);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+.paragraphdefault {
+  font-family: var(--font-family-onest-medium);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.text-single400regular {
+  font-family: var(--font-family-onest-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.text-single300regular {
+  font-family: var(--font-family-onest-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.text-single100regular {
+  font-family: var(--font-family-onest-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+.onest-regular-normal-dove-gray-14px {
+  color: var(--dove-gray);
+  font-family: var(--font-family-onest-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.onest-extra-extra-bold-shark-50px {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.inter-bold-black-56px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.inter-normal-log-cabin-18px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-medium-white-12px {
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-inter);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.onest-bold-white-18-5px {
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-onest-bold);
+  font-size: 18.5px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.onest-regular-normal-white-12px {
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-onest-regular);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.onest-extra-extra-bold-blue-14px {
+  color: var(--primary-colorscolor-1);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 800;
+}
+
+:root {
+}
+
+
+.actions {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 16px;
+  padding: 16px 0px 0px;
+  position: relative;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--black);
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 12px 24px;
+  position: relative;
+}
+
+.column {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.container {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 80px;
+  position: relative;
+  width: 1200px;
+}
+
+.content {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.first {
+  background-color: transparent;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.frame-37 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.get-started {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.group-1000004884 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.group-1000004885 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.group-1000004927 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.group-1000005293 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.group-43985 {
+  background-color: transparent;
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.h1-title-copy-goes-here-be-awesome {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 67.2px;
+  margin-top: -1.00px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+}
+
+.hero-heading-left {
+  align-items: flex-start;
+  background-color: var(--neutral-colors--100);
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  left: 42847px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding: 64px 24px;
+  position: absolute;
+  top: 5240px;
+  width: 1440px;
+}
+
+.i-phone-14-pro {
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.image {
+  align-self: stretch;
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/image.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  flex: 0 0 auto;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 100%;
+}
+
+.image-wrapper {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  position: relative;
+}
+
+.mockuuups-iphone-13 {
+  background-color: transparent;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.p-lorem-ipsum-dolor {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 27px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+}
+
+.paragraph {
+  background-color: transparent;
+  font-style: normal;
+  mix-blend-mode: normal;
+}
+
+.rectangle {
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.space-black {
+  background-color: transparent;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+}
+
+.vector {
+  background-color: transparent;
+  position: absolute;
+}
+
+/* screen - home-x-onest-1 */
+
+.home-x-onest-1 {
+  background-color: var(--neutral-colors200);
+  border: 1px none;
+  height: 5283px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.home-x-onest-1 .group-1000005295-ugApJD {
+  background-color: transparent;
+  height: 3678px;
+  left: -577px;
+  position: absolute;
+  top: 3341px;
+  width: 572px;
+}
+
+.home-x-onest-1 .group-1000004927-O1BCYA {
+  height: 298px;
+  left: 0px;
+  top: 3380px;
+  width: 572px;
+}
+
+.home-x-onest-1 .rectangle-5310-M8Ai6T {
+  height: 298px;
+  width: 572px;
+}
+
+.home-x-onest-1 .group-1000004885-O1BCYA {
+  height: 90px;
+  left: 35px;
+  top: 3431px;
+  width: 484px;
+}
+
+.home-x-onest-1 .group-43985-LrPxOs {
+  height: 90px;
+  width: 486px;
+}
+
+.home-x-onest-1 .heading-h1-xBpI4t {
+  color: var(--neutral-colors700);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 484px;
+}
+
+.home-x-onest-1 .group-1000004927-Cu7ZA7 {
+  height: 64px;
+  left: 34px;
+  top: 3557px;
+  width: 229px;
+}
+
+.home-x-onest-1 .group-1000004884-XS3xcv {
+  height: 56px;
+  left: 81px;
+  top: 4px;
+  width: 152px;
+}
+
+.home-x-onest-1 .paragraph-Q59G74 {
+  color: var(--neutral-colors700);
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 26px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-1 .paragraph-BJ67Xk {
+  color: var(--neutral-colors800);
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-1 .logo-facebook-O1BCYA {
+  background-color: transparent;
+  height: 9px;
+  left: -54657px;
+  position: absolute;
+  top: -4506px;
+  width: 98px;
+}
+
+.home-x-onest-1 .group-1000005299-ugApJD {
+  background-color: transparent;
+  height: 3847px;
+  left: -577px;
+  position: absolute;
+  top: 3497px;
+  width: 572px;
+}
+
+.home-x-onest-1 .group-1000004927-ql628U {
+  height: 298px;
+  left: 0px;
+  top: 3549px;
+  width: 572px;
+}
+
+.home-x-onest-1 .rectangle-5310-DRUlVc {
+  height: 298px;
+  width: 572px;
+}
+
+.home-x-onest-1 .group-1000004885-ql628U {
+  height: 90px;
+  left: 35px;
+  top: 3600px;
+  width: 484px;
+}
+
+.home-x-onest-1 .group-43985-YUQjQa {
+  height: 90px;
+  width: 486px;
+}
+
+.home-x-onest-1 .heading-h1-l9yWVG {
+  color: var(--neutral-colors700);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 484px;
+}
+
+.home-x-onest-1 .group-1000004927-o5ygyW {
+  height: 64px;
+  left: 34px;
+  top: 3726px;
+  width: 200px;
+}
+
+.home-x-onest-1 .group-1000004884-37UCiu {
+  height: 56px;
+  left: 81px;
+  top: 5px;
+  width: 123px;
+}
+
+.home-x-onest-1 .paragraph-yQxNJe {
+  color: var(--neutral-colors700);
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 26px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-1 .paragraph-vJKRfd {
+  color: var(--neutral-colors800);
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-1 .group-1000004893-ql628U {
+  background-color: transparent;
+  height: 12px;
+  left: -54659px;
+  position: absolute;
+  top: -4506px;
+  width: 101px;
+}
+
+.home-x-onest-1 .frame-1000005286-ugApJD {
+  background-color: transparent;
+  height: 945px;
+  left: 496px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 971px;
+}
+
+.home-x-onest-1 .group-1000002226-k9xRLU {
+  background-color: transparent;
+  height: 945px;
+  left: 0px;
+  opacity: 0.46;
+  position: relative;
+  top: 0px;
+  width: 971px;
+}
+
+.home-x-onest-1 .rectangle-5627-JwmhnB {
+  background-color: transparent;
+  border: 10.257209777832031px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(212.46774226427078, 195.1281175017357, 225.62187641859055), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 106.86px;
+  height: 569px;
+  left: 181px;
+  position: absolute;
+  top: -25px;
+  transform: rotate(48.01deg);
+  width: 190px;
+}
+
+.home-x-onest-1 .rectangle-5628-JwmhnB {
+  background-color: transparent;
+  border: 10.257209777832031px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(212.46774226427078, 195.1281175017357, 225.62187641859055), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 106.86px;
+  height: 318px;
+  left: 196px;
+  position: absolute;
+  top: 469px;
+  transform: rotate(47.16deg);
+  width: 174px;
+}
+
+.home-x-onest-1 .rectangle-5629-JwmhnB {
+  background-color: transparent;
+  border: 10.257209777832031px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(212.46774226427078, 195.1281175017357, 225.62187641859055), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 1531.59px;
+  height: 635px;
+  left: 587px;
+  position: absolute;
+  top: 352px;
+  transform: rotate(48.01deg);
+  width: 175px;
+}
+
+.home-x-onest-1 .group-1000002226-ugApJD {
+  background-color: transparent;
+  height: 285px;
+  left: -46px;
+  opacity: 0.05;
+  position: absolute;
+  top: 2237px;
+  width: 563px;
+}
+
+.home-x-onest-1 .rectangle-5627-Dgaqb4 {
+  background-color: transparent;
+  border: 5.94833517074585px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(153.00000607967377, 71.00000336766243, 150.0000062584877), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 61.97px;
+  height: 272px;
+  left: 118px;
+  position: absolute;
+  top: -58px;
+  transform: rotate(30.01deg);
+  width: 85px;
+}
+
+.home-x-onest-1 .rectangle-5628-Dgaqb4 {
+  background-color: transparent;
+  border: 5.94833517074585px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(153.00000607967377, 71.00000336766243, 150.0000062584877), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 61.97px;
+  height: 153px;
+  left: 125px;
+  position: absolute;
+  top: 113px;
+  transform: rotate(29.28deg);
+  width: 79px;
+}
+
+.home-x-onest-1 .rectangle-5629-Dgaqb4 {
+  background-color: transparent;
+  border: 5.94833517074585px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(153.00000607967377, 71.00000336766243, 150.0000062584877), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 888.2px;
+  height: 304px;
+  left: 352px;
+  position: absolute;
+  top: 50px;
+  transform: rotate(30.01deg);
+  width: 78px;
+}
+
+.home-x-onest-1 .group-1000005316-ugApJD {
+  background-color: transparent;
+  height: 37px;
+  left: 329px;
+  position: absolute;
+  top: 3083px;
+  width: 783px;
+}
+
+.home-x-onest-1 .group-47286-XFzWgE {
+  height: 37px;
+  width: 785px;
+}
+
+.home-x-onest-1 .paragraph-VB6JTY {
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-carmen_sans-regular);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 38px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  white-space: nowrap;
+  width: 783px;
+}
+
+.home-x-onest-1 .frame-1000005302-ugApJD {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 31px 31px;
+  left: 110px;
+  position: absolute;
+  top: 1393px;
+  width: 1220px;
+}
+
+.home-x-onest-1 .frame-1000005300-lMkVV9 {
+  background-color: transparent;
+  height: 685px;
+  overflow: hidden;
+  position: relative;
+  width: 596px;
+}
+
+.home-x-onest-1 .rectangle-7108-1t3hnv {
+  top: 2px;
+  width: 590px;
+}
+
+.home-x-onest-1 .heading-h1-1t3hnv {
+  height: auto;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 411px;
+}
+
+.home-x-onest-1 .ouvert-ou-ferm-dispo-1t3hnv {
+  background-color: transparent;
+  height: auto;
+  left: 76px;
+  letter-spacing: 0.00px;
+  line-height: 17.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 161px;
+  width: 367px;
+}
+
+.home-x-onest-1 .frame-1000005295-1t3hnv {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 10px;
+  left: 137px;
+  position: absolute;
+  top: 233px;
+}
+
+.home-x-onest-1 .i-phone-14-pro-8ClTew {
+  height: 658.6296997070312px;
+  width: 322.9747009277344px;
+}
+
+.home-x-onest-1 .wallet-ITSONn {
+  background-color: transparent;
+  height: 438px;
+  left: 15px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 14px;
+  width: 292px;
+}
+
+.home-x-onest-1 .space-black-ITSONn {
+  height: 452px;
+  left: -0px;
+  top: -0px;
+  width: 323px;
+}
+
+.home-x-onest-1 .frame-1000005301-lMkVV9 {
+  background-color: transparent;
+  height: 685px;
+  overflow: hidden;
+  position: relative;
+  width: 593px;
+}
+
+.home-x-onest-1 .rectangle-7108-IapafQ {
+  top: 0px;
+  width: 593px;
+}
+
+.home-x-onest-1 .heading-h1-IapafQ {
+  height: auto;
+  left: 72px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 398px;
+}
+
+.home-x-onest-1 .rservez-les-meilleur-IapafQ {
+  background-color: transparent;
+  height: auto;
+  left: 72px;
+  letter-spacing: 0.00px;
+  line-height: 17.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 165px;
+  width: 413px;
+}
+
+.home-x-onest-1 .frame-1000005294-IapafQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 10px;
+  left: 146px;
+  position: absolute;
+  top: 240px;
+}
+
+.home-x-onest-1 .i-phone-14-pro-Uq0ggT {
+  height: 658.6296997070312px;
+  width: 322.9747009277344px;
+}
+
+.home-x-onest-1 .preferences-ag72l2 {
+  background-color: transparent;
+  height: 431px;
+  left: 15px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 14px;
+  width: 293px;
+}
+
+.home-x-onest-1 .space-black-ag72l2 {
+  height: 445px;
+  left: -0px;
+  top: -0px;
+  width: 323px;
+}
+
+.home-x-onest-1 .group-1000005325-IapafQ {
+  background-color: transparent;
+  height: 59px;
+  left: 306px;
+  position: absolute;
+  top: 367px;
+  width: 256px;
+}
+
+.home-x-onest-1 .frame-53-gJd8Ox {
+  background-color: #ffffffeb;
+  border: 0.5867599248886108px solid;
+  border-radius: 6.26px;
+  height: 59px;
+  top: 0px;
+  width: 256px;
+}
+
+.home-x-onest-1 .x12h30-hu5ZAM {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 14.1px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 167px;
+  letter-spacing: 0.00px;
+  line-height: 17.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: right;
+  top: 13px;
+  width: 77px;
+}
+
+.home-x-onest-1 .frame-37-gJd8Ox {
+  left: 56px;
+  top: 14px;
+}
+
+.home-x-onest-1 .thomas-CIZOGl {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 14.1px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 17.6px;
+  margin-top: -0.78px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 130.65188598632812px;
+}
+
+.home-x-onest-1 .disponible-CIZOGl {
+  background-color: transparent;
+  color: #23bbac;
+  font-family: var(--font-family-onest-bold);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 12.5px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 143.9517822265625px;
+}
+
+.home-x-onest-1 .chris-barber-5-IapafQ {
+  background-color: transparent;
+  height: 37px;
+  left: 317px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 376px;
+  width: 37px;
+}
+
+.home-x-onest-1 .group-1000005323-IapafQ {
+  background-color: transparent;
+  height: 49px;
+  left: 328px;
+  opacity: 0.61;
+  position: absolute;
+  top: 439px;
+  width: 215px;
+}
+
+.home-x-onest-1 .frame-54-6ifGxP {
+  background-color: var(--neutral-colors--100);
+  border: 0.4931192696094513px solid;
+  border-color: var(--dark--dark-4);
+  border-radius: 5.26px;
+  height: 49px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 215px;
+}
+
+.home-x-onest-1 .list-items-6ifGxP {
+  background-color: transparent;
+  height: 37px;
+  left: 0px;
+  position: absolute;
+  top: 4px;
+  width: 215px;
+}
+
+.home-x-onest-1 .frame-37-qxOjt3 {
+  left: 47px;
+  top: 6px;
+}
+
+.home-x-onest-1 .jimmy-ART9Ht {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 11.8px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 14.8px;
+  margin-top: -0.66px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 109.80122375488281px;
+}
+
+.home-x-onest-1 .x2-pers-dans-la-file-ART9Ht {
+  background-color: transparent;
+  color: var(--azure-radiance);
+  font-family: var(--font-family-onest-bold);
+  font-size: 9.2px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 10.5px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 109.80122375488281px;
+}
+
+.home-x-onest-1 .frame-38-qxOjt3 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  left: 140px;
+  position: absolute;
+  top: 7px;
+  width: 65px;
+}
+
+.home-x-onest-1 .x12h55-AhGkRk {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 11.8px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 14.8px;
+  margin-top: -0.66px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 65.09174346923828px;
+}
+
+.home-x-onest-1 .x55-min-AhGkRk {
+  background-color: transparent;
+  color: #7d7d7d;
+  font-family: var(--font-family-onest-bold);
+  font-size: 9.2px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 10.5px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 65.09174346923828px;
+}
+
+.home-x-onest-1 .image-24-IapafQ {
+  background-color: transparent;
+  height: 25px;
+  left: 336px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 450px;
+  width: 25px;
+}
+
+.home-x-onest-1 .frame-1000005284-lMkVV9 {
+  background-color: transparent;
+  height: 685px;
+  overflow: hidden;
+  position: relative;
+  width: 596px;
+}
+
+.home-x-onest-1 .rectangle-7108-yb5A4S {
+  top: 2px;
+  width: 584px;
+}
+
+.home-x-onest-1 .heading-h1-yb5A4S {
+  height: auto;
+  left: 75px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  width: 411px;
+}
+
+.home-x-onest-1 .nous-identifions-vos-yb5A4S {
+  background-color: transparent;
+  height: auto;
+  left: 75px;
+  letter-spacing: 0.00px;
+  line-height: 17.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 168px;
+  width: 376px;
+}
+
+.home-x-onest-1 .group-1000005293-yb5A4S {
+  height: 642px;
+  left: 140px;
+  top: 228px;
+  width: 315px;
+}
+
+.home-x-onest-1 .i-phone-14-pro-mKNiDo {
+  height: 642px;
+  left: 0px;
+  top: 0px;
+  width: 315px;
+}
+
+.home-x-onest-1 .first-sikpHE {
+  height: 446px;
+  left: 13px;
+  top: 11px;
+  width: 294px;
+}
+
+.home-x-onest-1 .space-black-sikpHE {
+  height: 457px;
+  left: 0px;
+  top: 0px;
+  width: 315px;
+}
+
+.home-x-onest-1 .frame-1000005297-lMkVV9 {
+  background-color: transparent;
+  height: 685px;
+  overflow: hidden;
+  position: relative;
+  width: 593px;
+}
+
+.home-x-onest-1 .rectangle-7108-esSsfx {
+  top: 0px;
+  width: 593px;
+}
+
+.home-x-onest-1 .heading-h1-esSsfx {
+  height: auto;
+  left: 72px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  width: 398px;
+}
+
+.home-x-onest-1 .inutile-davoir-votre-esSsfx {
+  background-color: transparent;
+  height: auto;
+  left: 72px;
+  letter-spacing: 0.00px;
+  line-height: 17.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 172px;
+  width: 352px;
+}
+
+.home-x-onest-1 .group-1000005293-esSsfx {
+  height: 659px;
+  left: 124px;
+  top: 237px;
+  width: 323px;
+}
+
+.home-x-onest-1 .i-phone-14-pro-gWcc6d {
+  height: 659px;
+  left: 0px;
+  top: 0px;
+  width: 323px;
+}
+
+.home-x-onest-1 .first-c2UQQL {
+  height: 443px;
+  left: 12px;
+  top: 5px;
+  width: 300px;
+}
+
+.home-x-onest-1 .space-black-c2UQQL {
+  height: 448px;
+  left: -0px;
+  top: -0px;
+  width: 323px;
+}
+
+.home-x-onest-1 .group-1000005278-esSsfx {
+  background-color: transparent;
+  height: 231px;
+  left: 260px;
+  position: absolute;
+  top: 340px;
+  width: 309px;
+}
+
+.home-x-onest-1 .frame-1000005058-lMkVV9 {
+  background-color: transparent;
+  height: 685px;
+  overflow: hidden;
+  position: relative;
+  width: 593px;
+}
+
+.home-x-onest-1 .rectangle-7108-dFO0Yx {
+  top: 0px;
+  width: 593px;
+}
+
+.home-x-onest-1 .heading-h1-dFO0Yx {
+  height: auto;
+  left: 72px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  width: 411px;
+}
+
+.home-x-onest-1 .adam-winger-k-y0-c-mi-z-fo-q-unsplash-2-dFO0Yx {
+  background-color: transparent;
+  height: 302px;
+  left: 171px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 316px;
+  width: 302px;
+}
+
+.home-x-onest-1 .group-1000005279-dFO0Yx {
+  background-color: transparent;
+  height: 224px;
+  left: 63px;
+  position: absolute;
+  top: 253px;
+  width: 244px;
+}
+
+.home-x-onest-1 .list-itemssearch-results-dFO0Yx {
+  background-color: transparent;
+  height: 47px;
+  left: 280px;
+  position: absolute;
+  top: 534px;
+  width: 273px;
+}
+
+.home-x-onest-1 .frame-51-HvNWcV {
+  background-color: var(--neutral-colors--100);
+  border: 0.6270161271095276px solid;
+  border-color: var(--dark--dark-4);
+  border-radius: 6.69px;
+  height: 54px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -3px;
+  width: 273px;
+}
+
+.home-x-onest-1 .frame-52-HvNWcV {
+  background-color: var(--neutral-colors--100);
+  border: 0.6270161271095276px solid;
+  border-color: var(--dark--dark-4);
+  border-radius: 6.69px;
+  height: 54px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -3px;
+  width: 273px;
+}
+
+.home-x-onest-1 .frame-53-HvNWcV {
+  background-color: var(--neutral-colors--100);
+  border: 0.6270161271095276px solid;
+  border-radius: 6.69px;
+  height: 62px;
+  top: -8px;
+  width: 273px;
+}
+
+.home-x-onest-1 .group-177-qM5YxX {
+  background-color: transparent;
+  height: 16px;
+  left: 197px;
+  position: absolute;
+  top: 12px;
+  width: 65px;
+}
+
+.home-x-onest-1 .group-40085-qM5YxX {
+  background-color: transparent;
+  height: 11px;
+  left: 201px;
+  position: absolute;
+  top: 15px;
+  width: 55px;
+}
+
+.home-x-onest-1 .accroche-6TKlYT {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-onest-bold);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  height: 11px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 53px;
+}
+
+.home-x-onest-1 .chevron-right-qM5YxX {
+  background-color: transparent;
+  height: 17px;
+  left: 252px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 33px;
+  width: 17px;
+}
+
+.home-x-onest-1 .n202-qM5YxX {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 59px;
+  letter-spacing: 0.00px;
+  line-height: 18.8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.home-x-onest-1 .x200-pts-qM5YxX {
+  background-color: transparent;
+  color: var(--oil);
+  font-family: var(--font-family-onest-regular);
+  font-size: 11.7px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 196px;
+  letter-spacing: 0.00px;
+  line-height: 13.4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 34px;
+  width: 53px;
+}
+
+.home-x-onest-1 .rectangle-qM5YxX {
+  background-color: #f1663a;
+  border-radius: 18.12px;
+  height: 36px;
+  left: 14px;
+  top: 13px;
+  width: 35px;
+}
+
+.home-x-onest-1 .vector-qM5YxX {
+  height: 6px;
+  left: 20px;
+  mix-blend-mode: normal;
+  top: 28px;
+  width: 22px;
+}
+
+.home-x-onest-1 .frame-37-HvNWcV {
+  height: 33px;
+  left: 59px;
+  top: 5px;
+}
+
+.home-x-onest-1 .ticket-pris-le-2302-J0TXoX {
+  background-color: transparent;
+  color: var(--oil);
+  font-family: var(--font-family-onest-regular);
+  font-size: 11.7px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 13.4px;
+  margin-top: -0.84px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 153.8279266357422px;
+}
+
+.home-x-onest-1 .votre-fidlit-est-rco-dFO0Yx {
+  background-color: transparent;
+  height: auto;
+  left: 72px;
+  letter-spacing: 0.00px;
+  line-height: 17.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 172px;
+  width: 409px;
+}
+
+.home-x-onest-1 .frame-1000005296-lMkVV9 {
+  background-color: transparent;
+  height: 685px;
+  overflow: hidden;
+  position: relative;
+  width: 596px;
+}
+
+.home-x-onest-1 .rectangle-7108-cjqVGF {
+  top: 2px;
+  width: 590px;
+}
+
+.home-x-onest-1 .group-1000005293-cjqVGF {
+  height: 671px;
+  left: 141px;
+  top: 235px;
+  width: 329px;
+}
+
+.home-x-onest-1 .i-phone-14-pro-iNdod1 {
+  height: 671px;
+  left: 0px;
+  top: 0px;
+  width: 329px;
+}
+
+.home-x-onest-1 .first-VPvB6r {
+  height: 438px;
+  left: 13px;
+  top: 12px;
+  width: 307px;
+}
+
+.home-x-onest-1 .space-black-VPvB6r {
+  height: 450px;
+  left: 0px;
+  top: -0px;
+  width: 329px;
+}
+
+.home-x-onest-1 .floating-card-cjqVGF {
+  background-color: var(--neutral-colors--100);
+  border-radius: 12.88px;
+  box-shadow: -18.200000762939453px 12.079646110534668px 19.327434539794922px #868a9233;
+  height: 126px;
+  left: 49px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 261px;
+  width: 273px;
+}
+
+.home-x-onest-1 .frame-26-0HJugx {
+  background-color: transparent;
+  height: 35px;
+  left: 13px;
+  position: absolute;
+  top: 75px;
+  width: 166px;
+}
+
+.home-x-onest-1 .x2-personnes-devant-vous-Bxq1rb {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-onest-medium);
+  font-size: 12.9px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19.3px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-1 .environ-35-min-dattente-Bxq1rb {
+  background-color: transparent;
+  color: var(--colorsecondary400);
+  font-family: var(--font-family-onest-regular);
+  font-size: 9.7px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.40px;
+  line-height: 12.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-1 .aperu-de-lactivit-d-hicham-0HJugx {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-carmen_sans-medium);
+  font-size: 12.9px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 19.3px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 11px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-1 .rectangle-0HJugx {
+  background-color: #23bbac66;
+  border-radius: 6.44px;
+  height: 31px;
+  left: 57px;
+  top: 38px;
+  width: 201px;
+}
+
+.home-x-onest-1 .group-159-0HJugx {
+  background-color: transparent;
+  height: 31px;
+  left: 55px;
+  position: absolute;
+  top: 38px;
+  width: 174px;
+}
+
+.home-x-onest-1 .rectangle-pghNgP {
+  background-color: transparent;
+  height: 31px;
+  left: 0px;
+  top: 0px;
+  width: 74px;
+}
+
+.home-x-onest-1 .ticket-en-cours-pghNgP {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-roboto);
+  font-size: 13.7px;
+  font-style: normal;
+  font-weight: 700;
+  height: 13px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 9px;
+  white-space: nowrap;
+  width: 161px;
+}
+
+.home-x-onest-1 .mask-group-0HJugx {
+  background-color: transparent;
+  height: 34px;
+  left: 13px;
+  position: absolute;
+  top: 37px;
+  width: 35px;
+}
+
+.home-x-onest-1 .x113941-shuffle-queue-0HJugx {
+  background-color: transparent;
+  height: 23px;
+  left: 188px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 72px;
+  width: 78px;
+}
+
+.home-x-onest-1 .heading-h1-cjqVGF {
+  height: auto;
+  left: 70px;
+  letter-spacing: 0.00px;
+  line-height: 60px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  width: 411px;
+}
+
+.home-x-onest-1 .votre-horaire-se-met-cjqVGF {
+  background-color: transparent;
+  height: auto;
+  left: 68px;
+  letter-spacing: 0.00px;
+  line-height: 17.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 168px;
+  width: 367px;
+}
+
+.home-x-onest-1 .rectangle-7116-ugApJD {
+  background-color: var(--neutral-colors--100);
+  height: 640px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 4382px;
+  width: 1440px;
+}
+
+.home-x-onest-1 .heading-h1-ugApJD {
+  color: var(--neutral-colors800);
+  font-family: var(--font-family-carmen_sans-extrabold);
+  font-size: var(--font-size-54px);
+  font-style: normal;
+  font-weight: 800;
+  height: auto;
+  left: 105px;
+  letter-spacing: 0.00px;
+  line-height: 64px;
+  position: absolute;
+  text-align: left;
+  top: 4504px;
+  width: 642px;
+}
+
+.home-x-onest-1 .group-1000005320-ugApJD {
+  background-color: transparent;
+  height: 199px;
+  left: 981px;
+  opacity: 0.14;
+  position: absolute;
+  top: 2655px;
+  width: 422px;
+}
+
+.home-x-onest-1 .rectangle-5627-1gZbSv {
+  background-color: transparent;
+  border: 5.114873886108398px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgba(27.999998331069946, 91.5600161254406, 255, 0.3400000035762787), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 53.28px;
+  height: 201px;
+  left: 89px;
+  position: absolute;
+  top: -46px;
+  transform: rotate(28.22deg);
+  width: 63px;
+}
+
+.home-x-onest-1 .rectangle-5628-1gZbSv {
+  background-color: transparent;
+  border: 5.114873886108398px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgba(27.999998331069946, 91.5600161254406, 255, 0.3400000035762787), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 53.28px;
+  height: 113px;
+  left: 94px;
+  position: absolute;
+  top: 75px;
+  transform: rotate(27.52deg);
+  width: 58px;
+}
+
+.home-x-onest-1 .rectangle-5629-1gZbSv {
+  background-color: transparent;
+  border: 5.114873886108398px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgba(27.999998331069946, 91.5600161254406, 255, 0.3400000035762787), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 763.74px;
+  height: 225px;
+  left: 264px;
+  position: absolute;
+  top: 28px;
+  transform: rotate(28.22deg);
+  width: 58px;
+}
+
+.home-x-onest-1 .frame-1000005288-ugApJD {
+  align-items: flex-start;
+  background-color: transparent;
+  box-shadow: -6px 10px 13px #00000024;
+  display: inline-flex;
+  gap: 68px;
+  left: 109px;
+  position: absolute;
+  top: 4677px;
+}
+
+.home-x-onest-1 .group-1000005294-MpPT8J {
+  background-color: transparent;
+  height: 244.8603515625px;
+  position: relative;
+  width: 569.045654296875px;
+}
+
+.home-x-onest-1 .group-1000005143-X664ym {
+  width: 569px;
+}
+
+.home-x-onest-1 .group-1000004927-zJLXdH {
+  height: 245px;
+  left: 0px;
+  top: 0px;
+  width: 569px;
+}
+
+.home-x-onest-1 .rectangle-5310-40Ml8x {
+  height: 245px;
+  width: 569px;
+}
+
+.home-x-onest-1 .group-1000004885-zJLXdH {
+  height: 74px;
+  left: 44px;
+  top: 54px;
+  width: 481px;
+}
+
+.home-x-onest-1 .group-43985-deCHIA {
+  height: 74px;
+  width: 483px;
+}
+
+.home-x-onest-1 .heading-h1-nLZpBa {
+  color: var(--neutral-colors700);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 481px;
+}
+
+.home-x-onest-1 .group-1000004927-kCURiF {
+  height: 33px;
+  left: 44px;
+  top: 178px;
+  width: 172px;
+}
+
+.home-x-onest-1 .group-1000004884-3LBu8z {
+  height: 30px;
+  left: 46px;
+  top: 3px;
+  width: 128px;
+}
+
+.home-x-onest-1 .paragraph-wNxt2P {
+  color: var(--neutral-colors800);
+  font-family: var(--font-family-onest-bold);
+  font-size: 21.8px;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 29.0px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 126px;
+}
+
+.home-x-onest-1 .person-svgrepo-com-1-3LBu8z {
+  left: -0px;
+}
+
+.home-x-onest-1 .group-1000005316-MpPT8J {
+  background-color: transparent;
+  height: 244.8603515625px;
+  position: relative;
+  width: 572.045654296875px;
+}
+
+.home-x-onest-1 .group-1000005143-clSjAY {
+  width: 572px;
+}
+
+.home-x-onest-1 .group-1000004927-PEJxwS {
+  height: 245px;
+  left: 0px;
+  top: 0px;
+  width: 572px;
+}
+
+.home-x-onest-1 .rectangle-5310-xYOdzI {
+  height: 245px;
+  width: 572px;
+}
+
+.home-x-onest-1 .group-1000004885-PEJxwS {
+  height: 74px;
+  left: 44px;
+  top: 54px;
+  width: 484px;
+}
+
+.home-x-onest-1 .group-43985-x0vpxM {
+  height: 74px;
+  width: 486px;
+}
+
+.home-x-onest-1 .heading-h1-UBIx30 {
+  color: var(--neutral-colors700);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 484px;
+}
+
+.home-x-onest-1 .group-1000004927-4qgS9M {
+  height: 33px;
+  left: 44px;
+  top: 178px;
+  width: 173px;
+}
+
+.home-x-onest-1 .group-1000004884-9c1Kxc {
+  height: 30px;
+  left: 46px;
+  top: 3px;
+  width: 129px;
+}
+
+.home-x-onest-1 .paragraph-ZFMYrH {
+  color: var(--neutral-colors800);
+  font-family: var(--font-family-onest-bold);
+  font-size: 21.8px;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 29.0px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 127px;
+}
+
+.home-x-onest-1 .person-svgrepo-com-1-9c1Kxc {
+  left: 0px;
+}
+
+.home-x-onest-1 .frame-1000005327-ugApJD {
+  align-items: center;
+  gap: 27px;
+  left: 266px;
+  top: 929px;
+}
+
+.home-x-onest-1 .heading-h1-p3FkSc {
+  color: var(--neutral-colors800);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: 872px;
+}
+
+.home-x-onest-1 .group-1000005321-p3FkSc {
+  background-color: transparent;
+  height: 152px;
+  position: relative;
+  width: 908px;
+}
+
+.home-x-onest-1 .group-47286-K2r3qG {
+  height: 152px;
+  width: 910px;
+}
+
+.home-x-onest-1 .paragraph-Hp974o {
+  color: #737373;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  line-height: 38px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 908px;
+}
+
+.home-x-onest-1 .vector-ugApJD {
+  height: 766px;
+  left: 0px;
+  top: 3616px;
+  width: 1440px;
+}
+
+.home-x-onest-1 .group-47347-ugApJD {
+  background-color: transparent;
+  height: 251px;
+  left: 107px;
+  position: absolute;
+  top: 3731px;
+  width: 1062px;
+}
+
+.home-x-onest-1 .heading-h1-WzX7gI {
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-carmen_sans-bold);
+  font-size: 70.4px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 83.5px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 1060px;
+}
+
+.home-x-onest-1 .frame-1000005327-Ug8Kk3 {
+  align-items: flex-start;
+  gap: 10px;
+  left: 0px;
+  top: 0px;
+}
+
+.home-x-onest-1 .rectangle-5279-1ZY93i {
+  background: linear-gradient(180deg, rgb(21.133117005228996, 11.138543710112572, 61.11145578324795) 0%, rgb(21.133117005228996, 11.138543710112572, 61.11145578324795) 65.10416865348816%, rgb(9.31304756551981, 4.6565209329128265, 25.943478383123875) 95.3125%);
+  background-color: transparent;
+  height: 848px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 1440px;
+}
+
+.home-x-onest-1 .header-v2-1ZY93i {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  left: 0px;
+  overflow: hidden;
+  padding: 32px 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.home-x-onest-1 .primary-button-EPbPyK {
+  background-color: transparent;
+  flex: 0 0 auto;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.home-x-onest-1 .group-47301-1ZY93i {
+  background-color: transparent;
+  height: 408px;
+  left: 173px;
+  position: absolute;
+  top: 169px;
+  width: 492px;
+}
+
+.home-x-onest-1 .frame-1000005053-PXb7qh {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 492px;
+}
+
+.home-x-onest-1 .heading-h1-VAdnOx {
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-futura-medium);
+  font-size: 110px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.00px;
+  line-height: 110px;
+  margin-right: -84.00px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 576px;
+}
+
+.home-x-onest-1 .frame-1000005052-VAdnOx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  position: relative;
+}
+
+.home-x-onest-1 .paragraph-rRzJRC {
+  color: #cccccc;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 489.7265625px;
+}
+
+.home-x-onest-1 .google-play-badge-logo-svgrepo-com-1ZY93i {
+  background-color: transparent;
+  height: 189px;
+  left: 170px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 562px;
+  width: 189px;
+}
+
+.home-x-onest-1 .download-on-the-app-1ZY93i {
+  background-color: transparent;
+  height: 189px;
+  left: 396px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 562px;
+  width: 189px;
+}
+
+.home-x-onest-1 .frame-1000005056-1ZY93i {
+  background-color: transparent;
+  height: 34px;
+  left: 137px;
+  position: absolute;
+  top: 42px;
+  width: 181px;
+}
+
+.home-x-onest-1 .mockuuups-iphone-13-1ZY93i {
+  height: 516px;
+  left: 720px;
+  top: 131px;
+  width: 302px;
+}
+
+.home-x-onest-1 .mockuuups-iphone-13-U2Tmaw {
+  height: 543px;
+  left: 901px;
+  top: 208px;
+  width: 366px;
+}
+
+.home-x-onest-1 .column-FajlaM {
+  flex-direction: column;
+  gap: 24px;
+  mix-blend-mode: normal;
+}
+
+.home-x-onest-1 .column-tokyKO {
+  gap: 10px;
+}
+
+.home-x-onest-1 .column-kTvAmu {
+  flex-direction: column;
+  gap: 24px;
+  mix-blend-mode: normal;
+}
+
+.home-x-onest-1 .column-wxTGiK {
+  gap: 10px;
+}
+
+.home-x-onest-1 .group-1000005327-ugApJD {
+  background-color: transparent;
+  height: 261px;
+  left: 107px;
+  position: absolute;
+  top: 5022px;
+  width: 1220px;
+}
+
+.home-x-onest-1 .group-1000005315-0PkQ3r {
+  background-color: transparent;
+  height: 261px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1220px;
+}
+
+.home-x-onest-1 .footer-v3-2Vati7 {
+  background-color: transparent;
+  height: 120px;
+  left: 0px;
+  position: absolute;
+  top: 70px;
+  width: 1220px;
+}
+
+.home-x-onest-1 .rectangle-5300-E6w3V8 {
+  background-color: var(--primary-colorscolor-6);
+  border-radius: 24px;
+  height: 120px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: -0px;
+  width: 1220px;
+}
+
+.home-x-onest-1 .frame-1000005054-2Vati7 {
+  background-color: transparent;
+  height: 261px;
+  left: 32px;
+  position: absolute;
+  top: 0px;
+  width: 285px;
+}
+
+.home-x-onest-1 .group-1000002227-0ItCsh {
+  background-color: transparent;
+  height: 167px;
+  left: 26px;
+  position: relative;
+  top: 47px;
+  transform: rotate(30.00deg);
+  width: 235px;
+}
+
+.home-x-onest-1 .carden-p2r6aB {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-carmen_sans-extrabold);
+  font-size: 45.1px;
+  font-style: normal;
+  font-weight: 800;
+  height: 64px;
+  left: 51px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 41px;
+  transform: rotate(-30.56deg);
+  width: 177px;
+}
+
+.home-x-onest-1 .group-1000002227-p2r6aB {
+  background-color: transparent;
+  height: 47px;
+  left: 9px;
+  position: absolute;
+  top: 112px;
+  transform: rotate(-30.56deg);
+  width: 46px;
+}
+
+.home-x-onest-1 .rectangle-5627-p0H3xw {
+  background-color: var(--azure-radiance);
+  border-radius: 4.84px;
+  height: 27px;
+  left: 9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -1px;
+  transform: rotate(49.10deg);
+  width: 9px;
+}
+
+.home-x-onest-1 .rectangle-5628-p0H3xw {
+  background-color: var(--neutral-colors--100);
+  border-radius: 4.84px;
+  height: 15px;
+  left: 9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 23px;
+  transform: rotate(48.26deg);
+  width: 8px;
+}
+
+.home-x-onest-1 .rectangle-5629-p0H3xw {
+  background-color: var(--primary-colorscolor-2);
+  border-radius: 69.36px;
+  height: 31px;
+  left: 28px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 18px;
+  transform: rotate(49.10deg);
+  width: 9px;
+}
+
+.home-x-onest-1 .master-primary-button-ugApJD {
+  background-color: var(--blue);
+  left: 400px;
+  top: 1215px;
+}
+
+.home-x-onest-1 .master-primary-button-Ug8Kk3 {
+  background-color: var(--black);
+  left: 723px;
+  top: 1215px;
+}
+
+.home-x-onest-1 .master-primary-button-s4GB8V {
+  background-color: var(--blue);
+  left: 98px;
+  top: 4104px;
+}
+
+.home-x-onest-1 .master-primary-button-Gyxd2U {
+  background-color: var(--black);
+  left: 421px;
+  top: 4104px;
+}
+
+.home-x-onest-1 .contactcardenapp-ugApJD {
+  background-color: transparent;
+  cursor: pointer;
+  height: 18px;
+  left: 1143px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  top: 5139px;
+  width: auto;
+}
+
+.home-x-onest-1 .politique-de-confidentialit-ugApJD {
+  background-color: transparent;
+  height: auto;
+  left: 683px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  text-decoration: underline;
+  top: 5140px;
+  width: 186px;
+}
+
+.home-x-onest-1 .conditions-gnrales-dutilisation-ugApJD {
+  background-color: transparent;
+  height: auto;
+  left: 890px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  text-decoration: underline;
+  top: 5140px;
+  width: 232px;
+}
+
+.home-x-onest-1 .avatar-circle {
+  background-color: transparent;
+  height: 64px;
+  left: -55097px;
+  position: absolute;
+  top: -4506px;
+  width: 64px;
+}
+
+.home-x-onest-1 .button-text {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 20.6px;
+  margin-top: -1.03px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.home-x-onest-1 .frame-1000005327 {
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.home-x-onest-1 .frame-53 {
+  border-color: var(--dark--dark-4);
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.home-x-onest-1 .group-1000005143 {
+  background-color: transparent;
+  height: 245px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-x-onest-1 .group-47286 {
+  background-color: transparent;
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-x-onest-1 .heading-h1 {
+  background-color: transparent;
+  mix-blend-mode: normal;
+}
+
+.home-x-onest-1 .master-primary-button {
+  align-items: center;
+  border-radius: 98.89px;
+  display: inline-flex;
+  gap: 6.180727958679199px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 26.783153533935547px 39.14461135864258px;
+  position: absolute;
+}
+
+.home-x-onest-1 .new-page {
+  background-color: var(--neutral-colors--100);
+  height: 521px;
+  left: 42355px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 5632px;
+  width: 1440px;
+}
+
+.home-x-onest-1 .person-svgrepo-com-1 {
+  background-color: transparent;
+  height: 33px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 33px;
+}
+
+.home-x-onest-1 .rectangle-5310 {
+  background-color: var(--neutral-colors--100);
+  border-radius: 16px;
+  box-shadow: 0px 2px 6px #14132a0f;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+}
+
+.home-x-onest-1 .rectangle-7108 {
+  background-color: var(--wild-sand);
+  border-radius: 42px;
+  height: 685px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+/* screen - home-x-onest-2 */
+
+.home-x-onest-2 {
+  background-color: var(--neutral-colors200);
+  border: 1px none;
+  height: 4974px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 375px;
+}
+
+.home-x-onest-2 .group-1000005295-yOGX3D {
+  background-color: transparent;
+  height: 3873px;
+  left: -577px;
+  position: absolute;
+  top: 3146px;
+  width: 572px;
+}
+
+.home-x-onest-2 .group-1000004927-6hxY0I {
+  height: 298px;
+  left: 0px;
+  top: 3575px;
+  width: 572px;
+}
+
+.home-x-onest-2 .rectangle-5310-xvFppP {
+  border-radius: 16px;
+  box-shadow: 0px 2px 6px #14132a0f;
+  height: 298px;
+  width: 572px;
+}
+
+.home-x-onest-2 .group-1000004885-6hxY0I {
+  height: 90px;
+  left: 35px;
+  top: 3626px;
+  width: 484px;
+}
+
+.home-x-onest-2 .group-43985-WrHBxn {
+  height: 90px;
+  width: 486px;
+}
+
+.home-x-onest-2 .heading-h1-6Mnhvn {
+  color: var(--neutral-colors700);
+  font-weight: 500;
+  left: 0px;
+  line-height: 30px;
+  text-align: left;
+  top: 0px;
+  width: 484px;
+}
+
+.home-x-onest-2 .group-1000004927-1Ya0Bk {
+  height: 64px;
+  left: 34px;
+  top: 3753px;
+  width: 229px;
+}
+
+.home-x-onest-2 .group-1000004884-3lN3Tw {
+  height: 56px;
+  left: 81px;
+  top: 4px;
+  width: 152px;
+}
+
+.home-x-onest-2 .paragraph-tOK0ak {
+  color: var(--neutral-colors700);
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 26px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .paragraph-mRzxbX {
+  color: var(--neutral-colors800);
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .avatar-circle-3lN3Tw {
+  height: 64px;
+  width: 64px;
+}
+
+.home-x-onest-2 .logo-facebook-6hxY0I {
+  background-color: transparent;
+  height: 9px;
+  left: -56170px;
+  position: absolute;
+  top: -4506px;
+  width: 26px;
+}
+
+.home-x-onest-2 .group-1000005299-yOGX3D {
+  background-color: transparent;
+  height: 4051px;
+  left: -577px;
+  position: absolute;
+  top: 3292px;
+  width: 572px;
+}
+
+.home-x-onest-2 .group-1000004927-ffEQ7u {
+  height: 298px;
+  left: 0px;
+  top: 3753px;
+  width: 572px;
+}
+
+.home-x-onest-2 .rectangle-5310-TxkqPR {
+  border-radius: 16px;
+  box-shadow: 0px 2px 6px #14132a0f;
+  height: 298px;
+  width: 572px;
+}
+
+.home-x-onest-2 .group-1000004885-ffEQ7u {
+  height: 90px;
+  left: 35px;
+  top: 3804px;
+  width: 484px;
+}
+
+.home-x-onest-2 .group-43985-R2OGxt {
+  height: 90px;
+  width: 486px;
+}
+
+.home-x-onest-2 .heading-h1-u2Euyp {
+  color: var(--neutral-colors700);
+  font-weight: 500;
+  left: 0px;
+  line-height: 30px;
+  text-align: left;
+  top: 0px;
+  width: 484px;
+}
+
+.home-x-onest-2 .group-1000004927-xoxZZr {
+  height: 64px;
+  left: 34px;
+  top: 3930px;
+  width: 200px;
+}
+
+.home-x-onest-2 .group-1000004884-29ZHf1 {
+  height: 56px;
+  left: 81px;
+  top: 5px;
+  width: 123px;
+}
+
+.home-x-onest-2 .paragraph-soofF5 {
+  color: var(--neutral-colors700);
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 26px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .paragraph-7mvEym {
+  color: var(--neutral-colors800);
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .avatar-circle-29ZHf1 {
+  height: 64px;
+  width: 64px;
+}
+
+.home-x-onest-2 .group-1000004893-ffEQ7u {
+  background-color: transparent;
+  height: 11px;
+  left: -56170px;
+  position: absolute;
+  top: -4506px;
+  width: 26px;
+}
+
+.home-x-onest-2 .group-1000005054-yOGX3D {
+  background-color: transparent;
+  height: 40px;
+  left: 862px;
+  position: absolute;
+  top: 6293px;
+  width: 288px;
+}
+
+.home-x-onest-2 .group-1000005053-Vdu9Ks {
+  background-color: transparent;
+  height: 40px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 290px;
+}
+
+.home-x-onest-2 .vous-serez-recontacter-par-ONYycy {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-carmen_sans-light);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 300;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .frame-1000005286-yOGX3D {
+  height: 945px;
+  left: 496px;
+  top: 0px;
+  width: 971px;
+}
+
+.home-x-onest-2 .group-1000002226-CGurrt {
+  background-color: transparent;
+  height: 945px;
+  left: 0px;
+  opacity: 0.46;
+  position: relative;
+  top: 0px;
+  width: 971px;
+}
+
+.home-x-onest-2 .rectangle-5627-v0M8Ue {
+  background-color: transparent;
+  border: 10.257209777832031px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(212.46774226427078, 195.1281175017357, 225.62187641859055), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 106.86px;
+  height: 569px;
+  left: 181px;
+  position: absolute;
+  top: -25px;
+  transform: rotate(48.01deg);
+  width: 190px;
+}
+
+.home-x-onest-2 .rectangle-5628-v0M8Ue {
+  background-color: transparent;
+  border: 10.257209777832031px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(212.46774226427078, 195.1281175017357, 225.62187641859055), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 106.86px;
+  height: 318px;
+  left: 196px;
+  position: absolute;
+  top: 469px;
+  transform: rotate(47.16deg);
+  width: 174px;
+}
+
+.home-x-onest-2 .rectangle-5629-v0M8Ue {
+  background-color: transparent;
+  border: 10.257209777832031px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(212.46774226427078, 195.1281175017357, 225.62187641859055), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 1531.59px;
+  height: 635px;
+  left: 587px;
+  position: absolute;
+  top: 352px;
+  transform: rotate(48.01deg);
+  width: 175px;
+}
+
+.home-x-onest-2 .frame-1000005286-xqsPQX {
+  height: 1296px;
+  left: 933px;
+  top: 2509px;
+  width: 618px;
+}
+
+.home-x-onest-2 .ellipse-673-yTPiaq {
+  border-color: #3177ff14;
+  left: 257px;
+}
+
+.home-x-onest-2 .group-1000005319-yOGX3D {
+  background-color: transparent;
+  height: 122px;
+  left: 844px;
+  position: absolute;
+  top: 6340px;
+  width: 391px;
+}
+
+.home-x-onest-2 .group-1000005318-TOZyBA {
+  background-color: transparent;
+  height: 122px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 389px;
+}
+
+.home-x-onest-2 .group-1000005052-o9IV3T {
+  background-color: transparent;
+  height: 122px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 389px;
+}
+
+.home-x-onest-2 .group-1000005050-wAIN58 {
+  background-color: transparent;
+  height: 122px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 389px;
+}
+
+.home-x-onest-2 .rectangle-6989-IbYc6j {
+  background-color: var(--neutral-colors--100);
+  border: 1px solid;
+  border-color: var(--neutral-colors300);
+  border-radius: 24px;
+  height: 122px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+  width: 389px;
+}
+
+.home-x-onest-2 .group-39468-o9IV3T {
+  background-color: transparent;
+  height: 84px;
+  left: 31px;
+  position: absolute;
+  top: 18px;
+  width: 84px;
+}
+
+.home-x-onest-2 .group-39467-xC6BKZ {
+  background-color: transparent;
+  height: 84px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 84px;
+}
+
+.home-x-onest-2 .avatar-circle-YVDGh9 {
+  height: 84px;
+  width: 84px;
+}
+
+.home-x-onest-2 .mask-group-xC6BKZ {
+  height: 83px;
+  left: -56711px;
+  top: -4505px;
+  width: 83px;
+}
+
+.home-x-onest-2 .risvan-asif-co-founder-ceo-TOZyBA {
+  background-color: transparent;
+  color: #1e1e1e;
+  font-family: var(--font-family-carmen_sans-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 56px;
+  left: 136px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 34px;
+  width: auto;
+}
+
+.home-x-onest-2 .span0-wxTXXm {
+  color: var(--azure-radiance);
+  font-style: normal;
+}
+
+.home-x-onest-2 .span1-wxTXXm {
+  color: var(--azure-radiance);
+  font-family: var(--font-family-carmen_sans-extrabold);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.home-x-onest-2 .frame-1000005295-yOGX3D {
+  height: 430px;
+  left: 708px;
+  overflow: hidden;
+  top: 3815px;
+  width: 732px;
+}
+
+.home-x-onest-2 .ellipse-673-1s9aIV {
+  border-color: #cf95fb14;
+  left: 0px;
+}
+
+.home-x-onest-2 .rectangle-5279-yOGX3D {
+  background: linear-gradient(180deg, rgb(21.133117005228996, 11.138543710112572, 61.11145578324795) 0%, rgb(21.133117005228996, 11.138543710112572, 61.11145578324795) 65.10416865348816%, rgb(9.31304756551981, 4.6565209329128265, 25.943478383123875) 95.3125%);
+  background-color: transparent;
+  height: 537px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 375px;
+}
+
+.home-x-onest-2 .header-v2-yOGX3D {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  left: 0px;
+  overflow: hidden;
+  padding: 13.311111450195312px 0px;
+  position: absolute;
+  top: 0px;
+  width: 375px;
+}
+
+.home-x-onest-2 .primary-button-HmXyAq {
+  background-color: transparent;
+  flex: 0 0 auto;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.home-x-onest-2 .frame-1000005053-yOGX3D {
+  background-color: transparent;
+  height: 187px;
+  left: 67px;
+  position: absolute;
+  top: 205px;
+  width: 224px;
+}
+
+.home-x-onest-2 .heading-h1-dYIJBx {
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-futura-medium);
+  font-size: 48.3px;
+  font-weight: 500;
+  left: -8px;
+  letter-spacing: 0.00px;
+  line-height: 50.2px;
+  text-align: center;
+  top: 11px;
+  width: 263px;
+}
+
+.home-x-onest-2 .frame-1000005052-dYIJBx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 14.60035228729248px;
+  justify-content: center;
+  left: 0px;
+  position: absolute;
+  top: 181px;
+}
+
+.home-x-onest-2 .paragraph-b5p8I7 {
+  color: #cccccc;
+  font-family: var(--font-family-onest-regular);
+  font-size: 19.3px;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 18.9px;
+  margin-top: -0.46px;
+  position: relative;
+  text-align: center;
+  width: 247.7442169189453px;
+}
+
+.home-x-onest-2 .google-play-badge-logo-svgrepo-com-yOGX3D {
+  height: 107px;
+  left: 74px;
+  top: 421px;
+  width: 106px;
+}
+
+.home-x-onest-2 .download-on-the-app-yOGX3D {
+  background-color: transparent;
+  height: 107px;
+  left: 203px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 421px;
+  width: 106px;
+}
+
+.home-x-onest-2 .frame-1000005056-yOGX3D {
+  background-color: transparent;
+  height: 26px;
+  left: 119px;
+  position: absolute;
+  top: 26px;
+  width: 137px;
+}
+
+.home-x-onest-2 .mockuuups-iphone-13-yOGX3D {
+  height: 136px;
+  left: 119px;
+  top: 74px;
+  width: 80px;
+}
+
+.home-x-onest-2 .mockuuups-iphone-13-xqsPQX {
+  height: 124px;
+  left: 169px;
+  top: 82px;
+  width: 84px;
+}
+
+.home-x-onest-2 .column-64xxHl {
+  flex-direction: column;
+  gap: 24px;
+  mix-blend-mode: normal;
+}
+
+.home-x-onest-2 .column-3PxCkx {
+  gap: 10px;
+}
+
+.home-x-onest-2 .column-WxAoCj {
+  flex-direction: column;
+  gap: 24px;
+  mix-blend-mode: normal;
+}
+
+.home-x-onest-2 .column-ij9C6w {
+  gap: 10px;
+}
+
+.home-x-onest-2 .master-primary-button-yOGX3D {
+  background-color: var(--blue);
+  border-radius: 125.18px;
+  display: inline-flex;
+  gap: 7.824000358581543px;
+  left: -433px;
+  padding: 33.90399932861328px 49.552001953125px;
+  top: 2905px;
+}
+
+.home-x-onest-2 .button-text-JodHI1 {
+  font-family: var(--font-family-onest-bold);
+  font-size: 23.5px;
+  letter-spacing: 0.00px;
+  line-height: 26.1px;
+  margin-top: -1.30px;
+}
+
+.home-x-onest-2 .group-1000005315-yOGX3D {
+  background-color: transparent;
+  height: 481px;
+  left: 30px;
+  position: absolute;
+  top: 4462px;
+  width: 372px;
+}
+
+.home-x-onest-2 .rectangle-5300-ZgagGF {
+  height: 435px;
+}
+
+.home-x-onest-2 .group-1000002227-ZgagGF {
+  height: 43px;
+  left: 37px;
+  top: 33px;
+  transform: rotate(-0.56deg);
+  width: 43px;
+}
+
+.home-x-onest-2 .rectangle-5627-BudKk4 {
+  background-color: var(--azure-radiance);
+  border-radius: 4.48px;
+  height: 25px;
+  left: 8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -1px;
+  transform: rotate(49.10deg);
+  width: 9px;
+}
+
+.home-x-onest-2 .rectangle-5628-BudKk4 {
+  background-color: var(--neutral-colors--100);
+  border-radius: 4.48px;
+  height: 14px;
+  left: 9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 22px;
+  transform: rotate(48.26deg);
+  width: 8px;
+}
+
+.home-x-onest-2 .rectangle-5629-BudKk4 {
+  background-color: var(--primary-colorscolor-2);
+  border-radius: 64.25px;
+  height: 28px;
+  left: 26px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 16px;
+  transform: rotate(49.10deg);
+  width: 8px;
+}
+
+.home-x-onest-2 .contactcardenapp-ZgagGF {
+  left: 85px;
+  top: 344px;
+}
+
+.home-x-onest-2 .group-1000002227-tDSTk0 {
+  height: 135px;
+  left: 8px;
+  top: 47px;
+  transform: rotate(30.00deg);
+  width: 174px;
+}
+
+.home-x-onest-2 .google-play-badge-logo-svgrepo-com-tDSTk0 {
+  height: 234px;
+  left: -52px;
+  top: 137px;
+  width: 234px;
+}
+
+.home-x-onest-2 .group-1000005321-yOGX3D {
+  background-color: transparent;
+  height: 481px;
+  left: 30px;
+  position: absolute;
+  top: 4462px;
+  width: 372px;
+}
+
+.home-x-onest-2 .rectangle-5300-34gPlF {
+  height: 444px;
+}
+
+.home-x-onest-2 .group-1000002227-34gPlF {
+  height: 43px;
+  left: 41px;
+  top: 34px;
+  transform: rotate(-0.56deg);
+  width: 43px;
+}
+
+.home-x-onest-2 .rectangle-5627-Vd1dBx {
+  background-color: var(--azure-radiance);
+  border-radius: 4.48px;
+  height: 25px;
+  left: 8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -1px;
+  transform: rotate(49.10deg);
+  width: 9px;
+}
+
+.home-x-onest-2 .rectangle-5628-Vd1dBx {
+  background-color: var(--neutral-colors--100);
+  border-radius: 4.48px;
+  height: 14px;
+  left: 9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 22px;
+  transform: rotate(48.26deg);
+  width: 8px;
+}
+
+.home-x-onest-2 .rectangle-5629-Vd1dBx {
+  background-color: var(--primary-colorscolor-2);
+  border-radius: 64.25px;
+  height: 28px;
+  left: 26px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 16px;
+  transform: rotate(49.10deg);
+  width: 8px;
+}
+
+.home-x-onest-2 .contactcardenapp-34gPlF {
+  left: 88px;
+  top: 325px;
+}
+
+.home-x-onest-2 .politique-de-confidentialit-34gPlF {
+  background-color: transparent;
+  height: auto;
+  left: 68px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  text-decoration: underline;
+  top: 363px;
+  width: 186px;
+}
+
+.home-x-onest-2 .conditions-gnrales-dutilisation-34gPlF {
+  background-color: transparent;
+  height: auto;
+  left: 49px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  text-decoration: underline;
+  top: 396px;
+  width: 232px;
+}
+
+.home-x-onest-2 .group-1000002227-cIuSZU {
+  height: 135px;
+  left: 12px;
+  top: 48px;
+  transform: rotate(30.00deg);
+  width: 174px;
+}
+
+.home-x-onest-2 .google-play-badge-logo-svgrepo-com-cIuSZU {
+  height: 234px;
+  left: -46px;
+  top: 135px;
+  width: 234px;
+}
+
+.home-x-onest-2 .frame-1000005302-yOGX3D {
+  background-color: transparent;
+  height: 905px;
+  left: 46px;
+  position: absolute;
+  top: 1069px;
+  width: 276px;
+}
+
+.home-x-onest-2 .frame-1000005300-1xerOa {
+  background-color: transparent;
+  height: 368px;
+  left: -17px;
+  overflow: hidden;
+  position: relative;
+  top: -25px;
+  width: 320px;
+}
+
+.home-x-onest-2 .rectangle-7108-WiwDy0 {
+  border-radius: 22.55px;
+  height: 368px;
+  left: 0px;
+  top: 1px;
+  width: 317px;
+}
+
+.home-x-onest-2 .heading-h1-WiwDy0 {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: 26.8px;
+  font-weight: 800;
+  left: 2px;
+  letter-spacing: 0.00px;
+  line-height: 32.2px;
+  text-align: center;
+  top: 26px;
+  width: 313px;
+}
+
+.home-x-onest-2 .ouvert-ou-ferm-dispo-WiwDy0 {
+  background-color: transparent;
+  height: auto;
+  left: 12px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 72px;
+  width: 294px;
+}
+
+.home-x-onest-2 .frame-1000005295-WiwDy0 {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 5.36912727355957px;
+  left: 73px;
+  top: 164px;
+}
+
+.home-x-onest-2 .i-phone-14-pro-oUr3ya {
+  height: 353.6266784667969px;
+  width: 173.4092254638672px;
+}
+
+.home-x-onest-2 .wallet-LA7xJW {
+  background-color: transparent;
+  height: 196px;
+  left: 8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 8px;
+  width: 157px;
+}
+
+.home-x-onest-2 .space-black-LA7xJW {
+  height: 204px;
+  left: -0px;
+  top: 0px;
+  width: 173px;
+}
+
+.home-x-onest-2 .frame-1000005301-yOGX3D {
+  background-color: transparent;
+  height: 370px;
+  left: 29px;
+  overflow: hidden;
+  position: absolute;
+  top: 1445px;
+  width: 320px;
+}
+
+.home-x-onest-2 .rectangle-7108-2G075d {
+  border-radius: 22.66px;
+  height: 370px;
+  left: -0px;
+  top: -0px;
+  width: 320px;
+}
+
+.home-x-onest-2 .heading-h1-2G075d {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: 27px;
+  font-weight: 800;
+  left: 51px;
+  letter-spacing: 0.00px;
+  line-height: 32.4px;
+  text-align: left;
+  top: 18px;
+  width: 215px;
+}
+
+.home-x-onest-2 .rservez-les-meilleur-2G075d {
+  background-color: transparent;
+  height: auto;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 64px;
+  width: 294px;
+}
+
+.home-x-onest-2 .frame-1000005294-2G075d {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 5.396289825439453px;
+  left: 79px;
+  position: absolute;
+  top: 130px;
+}
+
+.home-x-onest-2 .i-phone-14-pro-JIfnfx {
+  height: 355.4156799316406px;
+  width: 174.2864990234375px;
+}
+
+.home-x-onest-2 .preferences-lnMBQ3 {
+  background-color: transparent;
+  height: 233px;
+  left: 8px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 8px;
+  width: 158px;
+}
+
+.home-x-onest-2 .space-black-lnMBQ3 {
+  height: 240px;
+  left: 0px;
+  top: 0px;
+  width: 174px;
+}
+
+.home-x-onest-2 .group-1000005325-2G075d {
+  background-color: transparent;
+  height: 32px;
+  left: 165px;
+  position: absolute;
+  top: 198px;
+  width: 138px;
+}
+
+.home-x-onest-2 .frame-53-lo6dch {
+  background-color: #ffffffeb;
+  border: 0.3166326582431793px solid;
+  border-radius: 3.38px;
+  height: 32px;
+  left: 0px;
+  top: 0px;
+  width: 138px;
+}
+
+.home-x-onest-2 .x12h30-qVAKSi {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 7.6px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 90px;
+  letter-spacing: 0.00px;
+  line-height: 9.5px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: right;
+  top: 7px;
+  width: 42px;
+}
+
+.home-x-onest-2 .frame-37-lo6dch {
+  left: 30px;
+  top: 7px;
+}
+
+.home-x-onest-2 .thomas-uV808t {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 7.6px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 9.5px;
+  margin-top: -0.42px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 70.5035400390625px;
+}
+
+.home-x-onest-2 .disponible-uV808t {
+  background-color: transparent;
+  color: #23bbac;
+  font-family: var(--font-family-onest-bold);
+  font-size: 5.9px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 6.8px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 77.68054962158203px;
+}
+
+.home-x-onest-2 .chris-barber-5-2G075d {
+  background-color: transparent;
+  height: 20px;
+  left: 171px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 203px;
+  width: 20px;
+}
+
+.home-x-onest-2 .group-1000005323-2G075d {
+  background-color: transparent;
+  height: 27px;
+  left: 177px;
+  opacity: 0.61;
+  position: absolute;
+  top: 237px;
+  width: 116px;
+}
+
+.home-x-onest-2 .frame-54-t5akwK {
+  background-color: var(--neutral-colors--100);
+  border: 0.2661014497280121px solid;
+  border-color: var(--dark--dark-4);
+  border-radius: 2.84px;
+  height: 27px;
+  left: 0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 0px;
+  width: 116px;
+}
+
+.home-x-onest-2 .list-items-t5akwK {
+  background-color: transparent;
+  height: 20px;
+  left: 0px;
+  position: absolute;
+  top: 2px;
+  width: 116px;
+}
+
+.home-x-onest-2 .frame-37-rtzWIp {
+  left: 26px;
+  top: 3px;
+}
+
+.home-x-onest-2 .jimmy-pzv7TV {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 6.4px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 8.0px;
+  margin-top: -0.35px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 59.251922607421875px;
+}
+
+.home-x-onest-2 .x2-pers-dans-la-file-pzv7TV {
+  background-color: transparent;
+  color: var(--azure-radiance);
+  font-family: var(--font-family-onest-bold);
+  font-size: 5px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 5.7px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 59.251922607421875px;
+}
+
+.home-x-onest-2 .frame-38-rtzWIp {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  left: 76px;
+  position: absolute;
+  top: 4px;
+  width: 35px;
+}
+
+.home-x-onest-2 .x12h55-vvLTXo {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 6.4px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 8.0px;
+  margin-top: -0.35px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 35.12539291381836px;
+}
+
+.home-x-onest-2 .x55-min-vvLTXo {
+  background-color: transparent;
+  color: #7d7d7d;
+  font-family: var(--font-family-onest-bold);
+  font-size: 5px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: 5.7px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: 35.12539291381836px;
+}
+
+.home-x-onest-2 .image-24-2G075d {
+  background-color: transparent;
+  height: 14px;
+  left: 181px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: absolute;
+  top: 243px;
+  width: 14px;
+}
+
+.home-x-onest-2 .frame-1000005297-yOGX3D {
+  background-color: transparent;
+  height: 370px;
+  left: 29px;
+  overflow: hidden;
+  position: absolute;
+  top: 2259px;
+  width: 320px;
+}
+
+.home-x-onest-2 .rectangle-7108-6nTwOk {
+  border-radius: 22.67px;
+  height: 370px;
+  left: 0px;
+  top: 0px;
+  width: 320px;
+}
+
+.home-x-onest-2 .heading-h1-6nTwOk {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: 27px;
+  font-weight: 800;
+  left: 39px;
+  letter-spacing: 0.00px;
+  line-height: 32.4px;
+  text-align: left;
+  top: 22px;
+  width: 273px;
+}
+
+.home-x-onest-2 .inutile-davoir-votre-6nTwOk {
+  background-color: transparent;
+  height: auto;
+  left: 28px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  width: 261px;
+}
+
+.home-x-onest-2 .group-1000005293-6nTwOk {
+  height: 356px;
+  left: 67px;
+  top: 128px;
+  width: 174px;
+}
+
+.home-x-onest-2 .i-phone-14-pro-MJOI6k {
+  height: 356px;
+  left: 0px;
+  top: 0px;
+  width: 174px;
+}
+
+.home-x-onest-2 .first-FQIOT7 {
+  height: 239px;
+  left: 6px;
+  top: 2px;
+  width: 162px;
+}
+
+.home-x-onest-2 .space-black-FQIOT7 {
+  height: 242px;
+  left: 0px;
+  top: 0px;
+  width: 174px;
+}
+
+.home-x-onest-2 .group-1000005278-6nTwOk {
+  background-color: transparent;
+  height: 125px;
+  left: 140px;
+  position: absolute;
+  top: 183px;
+  width: 167px;
+}
+
+.home-x-onest-2 .frame-1000005296-yOGX3D {
+  background-color: transparent;
+  height: 369px;
+  left: 29px;
+  overflow: hidden;
+  position: absolute;
+  top: 3071px;
+  width: 321px;
+}
+
+.home-x-onest-2 .rectangle-7108-6tB5xU {
+  border-radius: 22.62px;
+  height: 420px;
+  left: 0px;
+  top: 2px;
+  width: 318px;
+}
+
+.home-x-onest-2 .group-1000005293-6tB5xU {
+  height: 361px;
+  left: 75px;
+  top: 162px;
+  width: 177px;
+}
+
+.home-x-onest-2 .i-phone-14-pro-ueMg8Z {
+  height: 361px;
+  left: 0px;
+  top: 0px;
+  width: 177px;
+}
+
+.home-x-onest-2 .first-O88XSV {
+  height: 201px;
+  left: 7px;
+  top: 6px;
+  width: 165px;
+}
+
+.home-x-onest-2 .space-black-O88XSV {
+  height: 207px;
+  left: 0px;
+  top: -0px;
+  width: 177px;
+}
+
+.home-x-onest-2 .floating-card-6tB5xU {
+  background-color: var(--neutral-colors--100);
+  border-radius: 6.94px;
+  box-shadow: -9.802349090576172px 6.505983352661133px 10.409574508666992px #868a9233;
+  height: 68px;
+  left: 26px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 141px;
+  width: 147px;
+}
+
+.home-x-onest-2 .frame-26-qzw8xr {
+  background-color: transparent;
+  height: 19px;
+  left: 7px;
+  position: absolute;
+  top: 40px;
+  width: 89px;
+}
+
+.home-x-onest-2 .x2-personnes-devant-vous-FfbEAh {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-onest-medium);
+  font-size: 6.9px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 10.4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .environ-35-min-dattente-FfbEAh {
+  background-color: transparent;
+  color: var(--colorsecondary400);
+  font-family: var(--font-family-onest-regular);
+  font-size: 5.2px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.22px;
+  line-height: 6.9px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 11px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .aperu-de-lactivit-d-hicham-qzw8xr {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-carmen_sans-medium);
+  font-size: 6.9px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 10.4px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 6px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.home-x-onest-2 .rectangle-qzw8xr {
+  background-color: #23bbac66;
+  border-radius: 3.47px;
+  height: 16px;
+  left: 31px;
+  top: 21px;
+  width: 108px;
+}
+
+.home-x-onest-2 .group-159-qzw8xr {
+  background-color: transparent;
+  height: 16px;
+  left: 29px;
+  position: absolute;
+  top: 21px;
+  width: 94px;
+}
+
+.home-x-onest-2 .rectangle-avqpc5 {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  top: -0px;
+  width: 40px;
+}
+
+.home-x-onest-2 .ticket-en-cours-avqpc5 {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-roboto);
+  font-size: 7.4px;
+  font-style: normal;
+  font-weight: 700;
+  height: 7px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 5px;
+  white-space: nowrap;
+  width: 87px;
+}
+
+.home-x-onest-2 .mask-group-qzw8xr {
+  height: 18px;
+  left: 7px;
+  top: 20px;
+  width: 19px;
+}
+
+.home-x-onest-2 .x113941-shuffle-queue-qzw8xr {
+  background-color: transparent;
+  height: 12px;
+  left: 101px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 39px;
+  width: 42px;
+}
+
+.home-x-onest-2 .heading-h1-6tB5xU {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: 26.9px;
+  font-weight: 800;
+  left: 38px;
+  letter-spacing: 0.00px;
+  line-height: 32.3px;
+  text-align: left;
+  top: 30px;
+  width: 250px;
+}
+
+.home-x-onest-2 .votre-horaire-se-met-6tB5xU {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 72px;
+  width: 275px;
+}
+
+.home-x-onest-2 .frame-1000005058-yOGX3D {
+  background-color: transparent;
+  height: 371px;
+  left: 29px;
+  overflow: hidden;
+  position: absolute;
+  top: 2664px;
+  width: 321px;
+}
+
+.home-x-onest-2 .rectangle-7108-QPtMai {
+  border-radius: 22.65px;
+  height: 369px;
+  left: 0px;
+  top: 1px;
+  width: 320px;
+}
+
+.home-x-onest-2 .heading-h1-QPtMai {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: 27px;
+  font-weight: 800;
+  left: 14px;
+  letter-spacing: 0.00px;
+  line-height: 32.4px;
+  text-align: left;
+  top: 26px;
+  width: 298px;
+}
+
+.home-x-onest-2 .adam-winger-k-y0-c-mi-z-fo-q-unsplash-2-QPtMai {
+  background-color: transparent;
+  height: 163px;
+  left: 97px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 197px;
+  width: 163px;
+}
+
+.home-x-onest-2 .group-1000005279-QPtMai {
+  background-color: transparent;
+  height: 160px;
+  left: 39px;
+  position: absolute;
+  top: 164px;
+  width: 132px;
+}
+
+.home-x-onest-2 .list-itemssearch-results-QPtMai {
+  background-color: transparent;
+  height: 25px;
+  left: 156px;
+  position: absolute;
+  top: 315px;
+  width: 147px;
+}
+
+.home-x-onest-2 .frame-51-CeSvde {
+  background-color: var(--neutral-colors--100);
+  border: 0.33807167410850525px solid;
+  border-color: var(--dark--dark-4);
+  border-radius: 3.61px;
+  height: 29px;
+  left: -0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -2px;
+  width: 147px;
+}
+
+.home-x-onest-2 .frame-52-CeSvde {
+  background-color: var(--neutral-colors--100);
+  border: 0.33807167410850525px solid;
+  border-color: var(--dark--dark-4);
+  border-radius: 3.61px;
+  height: 29px;
+  left: -0px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -2px;
+  width: 147px;
+}
+
+.home-x-onest-2 .frame-53-CeSvde {
+  background-color: var(--neutral-colors--100);
+  border: 0.33807167410850525px solid;
+  border-radius: 3.61px;
+  height: 33px;
+  left: -0px;
+  top: -4px;
+  width: 147px;
+}
+
+.home-x-onest-2 .group-177-sKFVTX {
+  background-color: transparent;
+  height: 9px;
+  left: 106px;
+  position: absolute;
+  top: 6px;
+  width: 35px;
+}
+
+.home-x-onest-2 .group-40085-sKFVTX {
+  background-color: transparent;
+  height: 6px;
+  left: 108px;
+  position: absolute;
+  top: 8px;
+  width: 31px;
+}
+
+.home-x-onest-2 .accroche-gkKElF {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-onest-bold);
+  font-size: 4.3px;
+  font-style: normal;
+  font-weight: 700;
+  height: 6px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 29px;
+}
+
+.home-x-onest-2 .chevron-right-sKFVTX {
+  background-color: transparent;
+  height: 9px;
+  left: 136px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 18px;
+  width: 9px;
+}
+
+.home-x-onest-2 .n202-sKFVTX {
+  background-color: transparent;
+  color: var(--dark--dark-0);
+  font-family: var(--font-family-onest-bold);
+  font-size: 8.1px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 32px;
+  letter-spacing: 0.00px;
+  line-height: 10.1px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: 75px;
+}
+
+.home-x-onest-2 .x200-pts-sKFVTX {
+  background-color: transparent;
+  color: var(--oil);
+  font-family: var(--font-family-onest-regular);
+  font-size: 6.3px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 105px;
+  letter-spacing: 0.00px;
+  line-height: 7.2px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 18px;
+  width: 28px;
+}
+
+.home-x-onest-2 .rectangle-sKFVTX {
+  background-color: #f1663a;
+  border-radius: 9.77px;
+  height: 20px;
+  left: 8px;
+  top: 7px;
+  width: 19px;
+}
+
+.home-x-onest-2 .vector-sKFVTX {
+  height: 3px;
+  left: 11px;
+  mix-blend-mode: normal;
+  top: 15px;
+  width: 12px;
+}
+
+.home-x-onest-2 .frame-37-CeSvde {
+  height: 18px;
+  left: 32px;
+  top: 3px;
+}
+
+.home-x-onest-2 .ticket-pris-le-2302-JDwJ00 {
+  background-color: transparent;
+  color: var(--oil);
+  font-family: var(--font-family-onest-regular);
+  font-size: 6.3px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  line-height: 7.2px;
+  margin-top: -0.45px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 82.94023132324219px;
+}
+
+.home-x-onest-2 .votre-fidlit-est-rco-QPtMai {
+  background-color: transparent;
+  height: auto;
+  left: 14px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: center;
+  top: 70px;
+  width: 290px;
+}
+
+.home-x-onest-2 .group-1000005320-yOGX3D {
+  background-color: transparent;
+  height: 172px;
+  left: 255px;
+  opacity: 0.14;
+  position: absolute;
+  top: 2740px;
+  width: 110px;
+}
+
+.home-x-onest-2 .rectangle-5627-8npw4o {
+  background-color: transparent;
+  border: 5.114873886108398px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgba(27.999998331069946, 91.5600161254406, 255, 0.3400000035762787), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 53.28px;
+  height: 84px;
+  left: 17px;
+  position: absolute;
+  top: 5px;
+  transform: rotate(60.79deg);
+  width: 30px;
+}
+
+.home-x-onest-2 .rectangle-5628-8npw4o {
+  background-color: transparent;
+  border: 5.114873886108398px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgba(27.999998331069946, 91.5600161254406, 255, 0.3400000035762787), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 53.28px;
+  height: 47px;
+  left: 19px;
+  position: absolute;
+  top: 91px;
+  transform: rotate(60.06deg);
+  width: 27px;
+}
+
+.home-x-onest-2 .rectangle-5629-8npw4o {
+  background-color: transparent;
+  border: 5.114873886108398px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgba(27.999998331069946, 91.5600161254406, 255, 0.3400000035762787), rgba(159.96468275785446, 159.6494820713997, 161.2255159020424, 0)) 1;
+  border-radius: 763.74px;
+  height: 94px;
+  left: 63px;
+  position: absolute;
+  top: 75px;
+  transform: rotate(60.79deg);
+  width: 27px;
+}
+
+.home-x-onest-2 .frame-1000005327-yOGX3D {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 11.08620834350586px;
+  left: 32px;
+  position: absolute;
+  top: 707px;
+  width: 310px;
+}
+
+.home-x-onest-2 .group-1000005321-4fJsrk {
+  background-color: transparent;
+  height: 130px;
+  margin-left: -0.76px;
+  margin-right: -0.76px;
+  position: relative;
+  width: 312px;
+}
+
+.home-x-onest-2 .group-47286-3qogIP {
+  background-color: transparent;
+  height: 130px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 314px;
+}
+
+.home-x-onest-2 .paragraph-oE227B {
+  color: #737373;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  line-height: 21.6px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 312px;
+}
+
+.home-x-onest-2 .heading-h1-yOGX3D {
+  color: var(--neutral-colors800);
+  font-family: var(--font-family-onest-bold);
+  font-size: 31px;
+  font-weight: 700;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 40.3px;
+  text-align: center;
+  top: 569px;
+  width: 358px;
+}
+
+.home-x-onest-2 .frame-1000005284-yOGX3D {
+  background-color: transparent;
+  height: 373px;
+  left: 29px;
+  overflow: hidden;
+  position: absolute;
+  top: 1850px;
+  width: 325px;
+}
+
+.home-x-onest-2 .rectangle-7108-B4PbOQ {
+  border-radius: 22.87px;
+  height: 373px;
+  left: -0px;
+  top: 1px;
+  width: 318px;
+}
+
+.home-x-onest-2 .heading-h1-B4PbOQ {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-extrabold);
+  font-size: 27.2px;
+  font-weight: 800;
+  left: 17px;
+  letter-spacing: 0.00px;
+  line-height: 32.7px;
+  text-align: left;
+  top: 22px;
+  width: 284px;
+}
+
+.home-x-onest-2 .nous-identifions-vos-B4PbOQ {
+  background-color: transparent;
+  height: auto;
+  left: 19px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 63px;
+  width: 297px;
+}
+
+.home-x-onest-2 .group-1000005293-B4PbOQ {
+  height: 350px;
+  left: 76px;
+  top: 124px;
+  width: 172px;
+}
+
+.home-x-onest-2 .i-phone-14-pro-Y1c70n {
+  height: 350px;
+  left: 0px;
+  top: 0px;
+  width: 172px;
+}
+
+.home-x-onest-2 .first-wCN4U0 {
+  height: 243px;
+  left: 7px;
+  top: 6px;
+  width: 160px;
+}
+
+.home-x-onest-2 .space-black-wCN4U0 {
+  height: 249px;
+  left: -0px;
+  top: 0px;
+  width: 172px;
+}
+
+.home-x-onest-2 .vector-yOGX3D {
+  height: 481px;
+  left: 0px;
+  top: 3522px;
+  width: 375px;
+}
+
+.home-x-onest-2 .master-primary-button-xqsPQX {
+  background-color: var(--black);
+  border-radius: 98.89px;
+  display: flex;
+  gap: 6.180727958679199px;
+  height: 72px;
+  left: 40px;
+  padding: 26.783153533935547px 39.14461135864258px;
+  top: 3887px;
+  width: 310px;
+}
+
+.home-x-onest-2 .button-text-kbowhV {
+  line-height: 20.6px;
+  margin-bottom: -0.25px;
+  margin-top: -2.31px;
+}
+
+.home-x-onest-2 .master-primary-button-SNJYsi {
+  background-color: var(--blue);
+  border-radius: 98.89px;
+  display: flex;
+  gap: 6.180727958679199px;
+  height: 69px;
+  left: 39px;
+  padding: 26.783153533935547px 39.14461135864258px;
+  top: 3799px;
+  width: 308px;
+}
+
+.home-x-onest-2 .button-text-qsspFr {
+  line-height: 20.6px;
+  margin-bottom: -1.75px;
+  margin-top: -3.81px;
+}
+
+.home-x-onest-2 .heading-h1-xqsPQX {
+  color: var(--neutral-colors200);
+  font-family: var(--font-family-onest-bold);
+  font-size: 31px;
+  font-weight: 700;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 40.3px;
+  text-align: center;
+  top: 3573px;
+  width: 358px;
+}
+
+.home-x-onest-2 .heading-h1-SNJYsi {
+  color: var(--neutral-colors800);
+  font-family: var(--font-family-onest-bold);
+  font-size: 31px;
+  font-weight: 700;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 40.3px;
+  text-align: center;
+  top: 4038px;
+  width: 358px;
+}
+
+.home-x-onest-2 .frame-1000005288-yOGX3D {
+  align-items: flex-start;
+  background-color: transparent;
+  box-shadow: -3.3773555755615234px 5.628925800323486px 7.317604064941406px #00000024;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20.26413345336914px;
+  left: 26px;
+  position: absolute;
+  top: 4148px;
+}
+
+.home-x-onest-2 .group-1000005294-BIardS {
+  background-color: transparent;
+  height: 137.83009338378906px;
+  position: relative;
+  width: 320.3116149902344px;
+}
+
+.home-x-onest-2 .group-1000005143-GAgx5h {
+  width: 320px;
+}
+
+.home-x-onest-2 .group-1000004927-fsBJ4v {
+  height: 138px;
+  left: 0px;
+  top: 0px;
+  width: 320px;
+}
+
+.home-x-onest-2 .rectangle-5310-xEv3TN {
+  border-radius: 9.01px;
+  height: 138px;
+  width: 320px;
+}
+
+.home-x-onest-2 .group-1000004885-fsBJ4v {
+  height: 42px;
+  left: 25px;
+  top: 30px;
+  width: 271px;
+}
+
+.home-x-onest-2 .group-43985-9jYS2I {
+  height: 42px;
+  width: 273px;
+}
+
+.home-x-onest-2 .heading-h1-dLIH1L {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-medium);
+  font-size: var(--font-size-xxs);
+  font-weight: 500;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.9px;
+  text-align: left;
+  top: 0px;
+  width: 271px;
+}
+
+.home-x-onest-2 .group-1000004927-HN9aST {
+  height: 19px;
+  left: 25px;
+  top: 100px;
+  width: 97px;
+}
+
+.home-x-onest-2 .group-1000004884-EWvmLY {
+  height: 17px;
+  left: 26px;
+  top: 2px;
+  width: 73px;
+}
+
+.home-x-onest-2 .paragraph-yxuxy7 {
+  color: var(--neutral-colors800);
+  font-family: var(--font-family-onest-bold);
+  font-size: 12.3px;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.3px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 71px;
+}
+
+.home-x-onest-2 .person-svgrepo-com-1-EWvmLY {
+  left: 0px;
+  top: 0px;
+  width: 18px;
+}
+
+.home-x-onest-2 .group-1000005316-BIardS {
+  background-color: transparent;
+  height: 137.83009338378906px;
+  position: relative;
+  width: 322.00030517578125px;
+}
+
+.home-x-onest-2 .group-1000005143-buoWDY {
+  width: 322px;
+}
+
+.home-x-onest-2 .group-1000004927-hmiqBu {
+  height: 138px;
+  left: 0px;
+  top: 0px;
+  width: 322px;
+}
+
+.home-x-onest-2 .rectangle-5310-xpAcG4 {
+  border-radius: 9.01px;
+  box-shadow: 0px 1.125785231590271px 3.3773555755615234px #14132a0f;
+  height: 138px;
+  width: 322px;
+}
+
+.home-x-onest-2 .group-1000004885-hmiqBu {
+  height: 42px;
+  left: 25px;
+  top: 30px;
+  width: 272px;
+}
+
+.home-x-onest-2 .group-43985-RZqWL7 {
+  height: 42px;
+  width: 274px;
+}
+
+.home-x-onest-2 .heading-h1-DQBC7l {
+  color: var(--neutral-colors700);
+  font-family: var(--font-family-onest-medium);
+  font-size: var(--font-size-xxs);
+  font-weight: 500;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.9px;
+  text-align: left;
+  top: 0px;
+  width: 272px;
+}
+
+.home-x-onest-2 .group-1000004927-0xPMfX {
+  height: 19px;
+  left: 25px;
+  top: 100px;
+  width: 97px;
+}
+
+.home-x-onest-2 .group-1000004884-1ItaxD {
+  height: 17px;
+  left: 26px;
+  top: 2px;
+  width: 73px;
+}
+
+.home-x-onest-2 .paragraph-5TRDVY {
+  color: var(--neutral-colors800);
+  font-family: var(--font-family-onest-bold);
+  font-size: 12.3px;
+  font-weight: 700;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.3px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 71px;
+}
+
+.home-x-onest-2 .person-svgrepo-com-1-1ItaxD {
+  left: -0px;
+  top: -0px;
+  width: 19px;
+}
+
+.home-x-onest-2 .master-primary-button-mcFYnQ {
+  background-color: var(--black);
+  border-radius: 98.89px;
+  display: flex;
+  gap: 6.180727958679199px;
+  height: 72px;
+  left: 33px;
+  padding: 26.783153533935547px 39.14461135864258px;
+  top: 919px;
+  width: 310px;
+}
+
+.home-x-onest-2 .button-text-bWtvTM {
+  line-height: 20.6px;
+  margin-bottom: -0.25px;
+  margin-top: -2.31px;
+}
+
+.home-x-onest-2 .master-primary-button-jxevD4 {
+  background-color: var(--blue);
+  border-radius: 98.89px;
+  display: flex;
+  gap: 6.180727958679199px;
+  height: 69px;
+  left: 32px;
+  padding: 26.783153533935547px 39.14461135864258px;
+  top: 831px;
+  width: 308px;
+}
+
+.home-x-onest-2 .button-text-FI8uGQ {
+  line-height: 20.6px;
+  margin-bottom: -1.75px;
+  margin-top: -3.81px;
+}
+
+.home-x-onest-2 .avatar-circle {
+  background-color: transparent;
+  left: -56711px;
+  position: absolute;
+  top: -4506px;
+}
+
+.home-x-onest-2 .button-text {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-style: normal;
+  font-weight: 700;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.home-x-onest-2 .carden {
+  background-color: transparent;
+  color: var(--neutral-colors--100);
+  font-family: var(--font-family-carmen_sans-extrabold);
+  font-size: 41.8px;
+  font-style: normal;
+  font-weight: 800;
+  height: 59px;
+  left: 4px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  top: 38px;
+  transform: rotate(-30.56deg);
+  width: 164px;
+}
+
+.home-x-onest-2 .contactcardenapp {
+  background-color: transparent;
+  cursor: pointer;
+  height: 18px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  width: auto;
+}
+
+.home-x-onest-2 .ellipse-673 {
+  background-color: transparent;
+  border: 149.853515625px solid;
+  border-radius: 655.5px/631px;
+  height: 1262px;
+  position: relative;
+  top: 0px;
+  width: 1311px;
+}
+
+.home-x-onest-2 .footer-v3 {
+  background-color: transparent;
+  height: 422px;
+  left: 0px;
+  position: absolute;
+  top: 59px;
+  width: 320px;
+}
+
+.home-x-onest-2 .frame-1000005054 {
+  background-color: transparent;
+  height: 261px;
+  left: 87px;
+  position: absolute;
+  top: 0px;
+  width: 285px;
+}
+
+.home-x-onest-2 .frame-1000005286 {
+  background-color: transparent;
+  overflow: hidden;
+  position: absolute;
+}
+
+.home-x-onest-2 .frame-1000005295 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-x-onest-2 .frame-53 {
+  border-color: var(--dark--dark-4);
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.home-x-onest-2 .google-play-badge-logo-svgrepo-com {
+  background-color: transparent;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.home-x-onest-2 .group-1000002227 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-x-onest-2 .group-1000005143 {
+  background-color: transparent;
+  height: 138px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+}
+
+.home-x-onest-2 .heading-h1 {
+  background-color: transparent;
+  font-style: normal;
+  height: auto;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.home-x-onest-2 .mask-group {
+  background-color: transparent;
+  position: absolute;
+}
+
+.home-x-onest-2 .master-primary-button {
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.home-x-onest-2 .person-svgrepo-com-1 {
+  background-color: transparent;
+  height: 19px;
+  mix-blend-mode: normal;
+  position: absolute;
+}
+
+.home-x-onest-2 .rectangle-5300 {
+  background-color: var(--primary-colorscolor-6);
+  border-radius: 24px;
+  left: -5px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: -14px;
+  width: 325px;
+}
+
+.home-x-onest-2 .rectangle-5310 {
+  background-color: var(--neutral-colors--100);
+  left: 0px;
+  mix-blend-mode: normal;
+  position: relative;
+  top: 0px;
+}
+
+.home-x-onest-2 .rectangle-7108 {
+  background-color: var(--wild-sand);
+  mix-blend-mode: normal;
+  position: absolute;
+}
+@media screen and (max-width: 1439px) {
+  .screen.home-x-onest-1 { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1440px) {
+  .screen.home-x-onest-2 { 
+    display: none;
+   }
+}</style></head><body style="margin: 0;background: #f9fafa;"><input type="hidden" id="anPageName" name="page" value="home-x-onest-2"><div class="container-center-horizontal"><div class="home-x-onest-1 screen " data-id="4850:608078"><div class="group-1000005295-ugApJD" data-id="4850:608080"><div class="group-1000004927-O1BCYA group-1000004927" data-id="4850:608081"><div class="rectangle-5310-M8Ai6T rectangle-5310" data-id="4850:608082"></div></div><div class="group-1000004885-O1BCYA group-1000004885" data-id="4850:608083"><div class="group-43985-LrPxOs group-43985" data-id="4850:608084"><p class="heading-h1-xBpI4t heading-h1 paragraphdefault" data-id="4850:608085">“Porttitor donec id turpis egestas facilisis nunc cursus nec risus egetole aenean adipiscing in eget convallis cras ornare risus purus eros neque vel mattis et nibh.</p></div></div><div class="group-1000004927-Cu7ZA7 group-1000004927" data-id="4850:608086"><div class="group-1000004884-XS3xcv group-1000004884" data-id="4850:608087"><div class="paragraph-Q59G74 paragraph paragraphdefault" data-id="4850:608088">Finance manager</div><div class="paragraph-BJ67Xk paragraph headingstypography-size-5" data-id="4850:608089">John Carter</div></div><img class="avatar-circle" data-id="4850:608090" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf716421de636a7c7326ea/img/logo-facebook@2x.png" alt="Avatar Circle"></div><img class="logo-facebook-O1BCYA" data-id="4850:608096" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf716421de636a7c7326ea/img/logo-facebook@2x.png" alt="Logo/Facebook"></div><div class="group-1000005299-ugApJD" data-id="4850:608098"><div class="group-1000004927-ql628U group-1000004927" data-id="4850:608099"><div class="rectangle-5310-DRUlVc rectangle-5310" data-id="4850:608100"></div></div><div class="group-1000004885-ql628U group-1000004885" data-id="4850:608101"><div class="group-43985-YUQjQa group-43985" data-id="4850:608102"><p class="heading-h1-l9yWVG heading-h1 paragraphdefault" data-id="4850:608103">“Porttitor donec id turpis egestas facilisis nunc cursus nec risus egetole aenean adipiscing in eget convallis cras ornare risus purus eros neque vel mattis et nibh.</p></div></div><div class="group-1000004927-o5ygyW group-1000004927" data-id="4850:608104"><div class="group-1000004884-37UCiu group-1000004884" data-id="4850:608105"><div class="paragraph-yQxNJe paragraph paragraphdefault" data-id="4850:608106">VP of Finance</div><div class="paragraph-vJKRfd paragraph headingstypography-size-5" data-id="4850:608107">Annie Scott</div></div><img class="avatar-circle" data-id="4850:608108" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf716421de636a7c7326ea/img/logo-facebook@2x.png" alt="Avatar Circle"></div><img class="group-1000004893-ql628U" data-id="4850:608114" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf716421de636a7c7326ea/img/logo-facebook@2x.png" alt="Group 1000004893"></div><div class="frame-1000005286-ugApJD" data-id="4850:608156"><div class="group-1000002226-k9xRLU" data-id="4850:608157"><div class="rectangle-5627-JwmhnB" data-id="4850:608158"></div><div class="rectangle-5628-JwmhnB" data-id="4850:608159"></div><div class="rectangle-5629-JwmhnB" data-id="4850:608160"></div></div></div><div class="group-1000002226-ugApJD" data-id="4850:608161"><div class="rectangle-5627-Dgaqb4" data-id="4850:608162"></div><div class="rectangle-5628-Dgaqb4" data-id="4850:608163"></div><div class="rectangle-5629-Dgaqb4" data-id="4850:608164"></div></div><div class="group-1000005316-ugApJD" data-id="4850:608166"><div class="group-47286-XFzWgE group-47286" data-id="4850:608167"><p class="paragraph-VB6JTY paragraph" data-id="4850:608168">Remplissez ce formulaire pour pour profitez <br>de l‘expérience Carden ✨</p></div></div><div class="frame-1000005302-ugApJD" data-id="4850:608198"><div class="frame-1000005300-lMkVV9" data-id="4850:608199"><div class="rectangle-7108-1t3hnv rectangle-7108" data-id="4850:608200"></div><div class="heading-h1-1t3hnv heading-h1 onest-extra-extra-bold-shark-50px" data-id="4850:608201">Visibilité en<br>temps réel</div><p class="ouvert-ou-ferm-dispo-1t3hnv onest-regular-normal-dove-gray-14px" data-id="4850:608202">Ouvert ou fermé ? Disponible immédiatement ou longue attente.&nbsp;&nbsp;Les informations dont vous avez toujours eu besoin sont maintenant accessiblent en un coup d’oeil.</p><div class="frame-1000005295-1t3hnv" data-id="4850:608203"><div class="i-phone-14-pro-8ClTew i-phone-14-pro" data-id="4850:608204"><img class="wallet-ITSONn" data-id="4850:608205" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/wallet@2x.jpg" alt="WALLET"><img class="space-black-ITSONn space-black" data-id="4850:608302" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black.png" alt="Space Black"></div></div></div><div class="frame-1000005301-lMkVV9" data-id="4850:608303"><div class="rectangle-7108-IapafQ rectangle-7108" data-id="4850:608304"></div><div class="heading-h1-IapafQ heading-h1 onest-extra-extra-bold-shark-50px" data-id="4850:608305">Accès<br>privilégié</div><p class="rservez-les-meilleur-IapafQ onest-regular-normal-dove-gray-14px" data-id="4850:608306">Réservez les meilleurs créneaux en fonction de votre disponibilité. Nous avons de la place, même en dernière minute.</p><div class="frame-1000005294-IapafQ" data-id="4850:608307"><div class="i-phone-14-pro-Uq0ggT i-phone-14-pro" data-id="4850:608308"><img class="preferences-ag72l2" data-id="4850:608309" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/preferences.png" alt="PREFERENCES"><img class="space-black-ag72l2 space-black" data-id="4850:608391" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-1.png" alt="Space Black"></div></div><div class="group-1000005325-IapafQ" data-id="4850:608392"><div class="frame-53-gJd8Ox frame-53" data-id="4850:608393"><div class="x12h30-hu5ZAM" data-id="4850:608394">12h30</div></div><div class="frame-37-gJd8Ox frame-37" data-id="4850:608395"><div class="thomas-CIZOGl" data-id="4850:608396">Thomas</div><div class="disponible-CIZOGl" data-id="4850:608397">Disponible</div></div></div><img class="chris-barber-5-IapafQ" data-id="4850:608398" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/chris-barber-5@2x.png" alt="Chris-barber 5"><div class="group-1000005323-IapafQ" data-id="4850:608399"><div class="frame-54-6ifGxP" data-id="4850:608400"></div><div class="list-items-6ifGxP" data-id="4850:608401"><div class="frame-37-qxOjt3 frame-37" data-id="4850:608402"><div class="jimmy-ART9Ht" data-id="4850:608403">Jimmy</div><p class="x2-pers-dans-la-file-ART9Ht" data-id="4850:608404">2 pers. dans la file</p></div><div class="frame-38-qxOjt3" data-id="4850:608405"><div class="x12h55-AhGkRk" data-id="4850:608406">12h55</div><div class="x55-min-AhGkRk" data-id="4850:608407">55 min</div></div></div></div><img class="image-24-IapafQ" data-id="4850:608408" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/image-2-4@2x.png" alt="image 2.4"></div><div class="frame-1000005284-lMkVV9" data-id="4850:608409"><div class="rectangle-7108-yb5A4S rectangle-7108" data-id="4850:608410"></div><div class="heading-h1-yb5A4S heading-h1 onest-extra-extra-bold-shark-50px" data-id="4850:608411">Réservation <br>Express</div><p class="nous-identifions-vos-yb5A4S onest-regular-normal-dove-gray-14px" data-id="4850:608412">Nous identifions vos habitudes pour vous permettre <br>de réserver en accéléré. Tout va plus vite avec Carden !</p><div class="group-1000005293-yb5A4S group-1000005293" data-id="4850:608413"><div class="i-phone-14-pro-mKNiDo i-phone-14-pro" data-id="4850:608414"><img class="first-sikpHE first" data-id="4850:608415" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/first-2@1.5x.png" alt="First"><img class="space-black-sikpHE space-black" data-id="4850:608831" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-2.png" alt="Space Black"></div></div></div><div class="frame-1000005297-lMkVV9" data-id="4850:608832"><div class="rectangle-7108-esSsfx rectangle-7108" data-id="4850:608833"></div><div class="heading-h1-esSsfx heading-h1 onest-extra-extra-bold-shark-50px" data-id="4850:608834">Paiement <br>en ligne</div><p class="inutile-davoir-votre-esSsfx onest-regular-normal-dove-gray-14px" data-id="4850:608835">Inutile d’avoir votre carte bancaire ou du cash.<br>Vous payez directement en ligne et gagnez du temps .</p><div class="group-1000005293-esSsfx group-1000005293" data-id="4850:608836"><div class="i-phone-14-pro-gWcc6d i-phone-14-pro" data-id="4850:608837"><img class="first-c2UQQL first" data-id="4850:608838" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/first@1.5x.png" alt="First"><img class="space-black-c2UQQL space-black" data-id="4850:608891" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-3.png" alt="Space Black"></div></div><img class="group-1000005278-esSsfx" data-id="4850:608892" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/group-1000005278@2x.png" alt="Group 1000005278"></div><div class="frame-1000005058-lMkVV9" data-id="4850:608929"><div class="rectangle-7108-dFO0Yx rectangle-7108" data-id="4850:608930"></div><div class="heading-h1-dFO0Yx heading-h1 onest-extra-extra-bold-shark-50px" data-id="4850:608931">Programme <br>de fidélité</div><img class="adam-winger-k-y0-c-mi-z-fo-q-unsplash-2-dFO0Yx" data-id="4850:608932" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/adam-winger-k-y0cmizfoq-unsplash-2@2x.png" alt="adam-winger-K-Y0CMiZFoQ-unsplash 2"><img class="group-1000005279-dFO0Yx" data-id="4850:608933" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/group-1000005279@2x.png" alt="Group 1000005279"><div class="list-itemssearch-results-dFO0Yx" data-id="4850:608961"><div class="frame-51-HvNWcV" data-id="4850:608962"></div><div class="frame-52-HvNWcV" data-id="4850:608963"></div><div class="frame-53-HvNWcV frame-53" data-id="4850:608964"><img class="group-177-qM5YxX" data-id="4850:608965" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/group-177@2x.png" alt="Group 177"><div class="group-40085-qM5YxX" data-id="4850:608970"><div class="accroche-6TKlYT valign-text-middle" data-id="4850:608971">DÉJA PAYÉ</div></div><img class="chevron-right-qM5YxX" data-id="4850:608972" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/chevron-right.svg" alt="chevron-right"><div class="n202-qM5YxX" data-id="4850:608974">n°202</div><div class="x200-pts-qM5YxX" data-id="4850:608975">+ 200 pts</div><div class="rectangle-qM5YxX rectangle" data-id="4850:608976"></div><img class="vector-qM5YxX vector" data-id="4850:608977" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/vector.svg" alt="Vector"></div><div class="frame-37-HvNWcV frame-37" data-id="4850:608978"><div class="ticket-pris-le-2302-J0TXoX" data-id="4850:608979">Ticket pris le 23/02</div></div></div><p class="votre-fidlit-est-rco-dFO0Yx onest-regular-normal-dove-gray-14px" data-id="4850:608980">Votre fidélité est récompensé, vous cumulez des points et bénéficiez d’avantages exclusifs en réservant en ligne.</p></div><div class="frame-1000005296-lMkVV9" data-id="4850:608981"><div class="rectangle-7108-cjqVGF rectangle-7108" data-id="4850:608982"></div><div class="group-1000005293-cjqVGF group-1000005293" data-id="4850:608983"><div class="i-phone-14-pro-iNdod1 i-phone-14-pro" data-id="4850:608984"><img class="first-VPvB6r first" data-id="4850:608985" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/first-1@1.5x.png" alt="First"><img class="space-black-VPvB6r space-black" data-id="4850:609301" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-4.png" alt="Space Black"></div></div><div class="floating-card-cjqVGF" data-id="4850:609302"><div class="frame-26-0HJugx" data-id="4850:609303"><div class="x2-personnes-devant-vous-Bxq1rb" data-id="4850:609304">2 personnes devant vous</div><div class="environ-35-min-dattente-Bxq1rb" data-id="4850:609305">Environ 35 min d’attente</div></div><div class="aperu-de-lactivit-d-hicham-0HJugx" data-id="4850:609306">Aperçu de l’activité d’Hicham</div><div class="rectangle-0HJugx rectangle" data-id="4850:609307"></div><div class="group-159-0HJugx" data-id="4850:609308"><img class="rectangle-pghNgP rectangle" data-id="4850:609309" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/rectangle.svg" alt="Rectangle"><div class="ticket-en-cours-pghNgP valign-text-middle" data-id="4850:609310">Ticket en cours</div></div><img class="mask-group-0HJugx" data-id="4850:609311" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/mask-group@2x.png" alt="Mask Group"><img class="x113941-shuffle-queue-0HJugx" data-id="4850:609315" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/113941-shuffle-queue-lottie-json-animation-5.gif" alt="113941-shuffle-queue-lottie-json-animation 5"></div><div class="heading-h1-cjqVGF heading-h1 onest-extra-extra-bold-shark-50px" data-id="4850:609316">Horaire intelligent</div><p class="votre-horaire-se-met-cjqVGF onest-regular-normal-dove-gray-14px" data-id="4850:609317">Votre horaire se met à jour, vous recevez des notifications intelligentes pour vous prévenir de ce qui ce passe en salon.</p></div></div><div class="rectangle-7116-ugApJD" data-id="4850:609331"></div><p class="heading-h1-ugApJD heading-h1" data-id="4850:609332">Ce qu’ils disent de <br>nous sur Google</p><div class="group-1000005320-ugApJD" data-id="4850:609344"><div class="rectangle-5627-1gZbSv" data-id="4850:609345"></div><div class="rectangle-5628-1gZbSv" data-id="4850:609346"></div><div class="rectangle-5629-1gZbSv" data-id="4850:609347"></div></div><div class="frame-1000005288-ugApJD" data-id="4850:609348"><div class="group-1000005294-MpPT8J" data-id="4850:609361"><div class="group-1000005143-X664ym group-1000005143" data-id="4850:609362"><div class="group-1000004927-zJLXdH group-1000004927" data-id="4850:609363"><div class="rectangle-5310-40Ml8x rectangle-5310" data-id="4850:609364"></div></div><div class="group-1000004885-zJLXdH group-1000004885" data-id="4850:609365"><div class="group-43985-deCHIA group-43985" data-id="4850:609366"><p class="heading-h1-nLZpBa heading-h1 paragraphdefault" data-id="4850:609367">“Carden a révolutionné la manière dont je gère mes rendez-vous avec des professionnels. C&#39;est simple, rapide et efficace !”</p></div></div><div class="group-1000004927-kCURiF group-1000004927" data-id="4850:609368"><div class="group-1000004884-3LBu8z group-1000004884" data-id="4850:609369"><div class="paragraph-wNxt2P paragraph" data-id="4850:609370">Marie87</div></div><img class="person-svgrepo-com-1-3LBu8z person-svgrepo-com-1" data-id="4850:609371" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/person-svgrepo-com-1.svg" alt="person-svgrepo-com 1"></div></div></div><div class="group-1000005316-MpPT8J" data-id="4850:609373"><div class="group-1000005143-clSjAY group-1000005143" data-id="4850:609374"><div class="group-1000004927-PEJxwS group-1000004927" data-id="4850:609375"><div class="rectangle-5310-xYOdzI rectangle-5310" data-id="4850:609376"></div></div><div class="group-1000004885-PEJxwS group-1000004885" data-id="4850:609377"><div class="group-43985-x0vpxM group-43985" data-id="4850:609378"><p class="heading-h1-UBIx30 heading-h1 paragraphdefault" data-id="4850:609379">“Je recommande vivement Carden ! L&#39;application m&#39;a permis de gagner énormément de temps et de réserver en dernière minute sans attente sur place”</p></div></div><div class="group-1000004927-4qgS9M group-1000004927" data-id="4850:609380"><div class="group-1000004884-9c1Kxc group-1000004884" data-id="4850:609381"><div class="paragraph-ZFMYrH paragraph" data-id="4850:609382">Paulopaul</div></div><img class="person-svgrepo-com-1-9c1Kxc person-svgrepo-com-1" data-id="4850:609383" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/person-svgrepo-com-1-1.svg" alt="person-svgrepo-com 1"></div></div></div></div><div class="frame-1000005327-ugApJD frame-1000005327" data-id="4850:609398"><p class="heading-h1-p3FkSc heading-h1 special-headingsdisplay-2" data-id="4850:609399">Rejoignez le club et bénéficiez de l’expérience Carden</p><div class="group-1000005321-p3FkSc" data-id="4850:609400"><div class="group-47286-K2r3qG group-47286" data-id="4850:609401"><p class="paragraph-Hp974o paragraph text-single400regular" data-id="4850:609402">Votre professionnel préféré vous à invité sur l’application Carden, <br>découvrez les avantages exclusifs en téléchargeant l’application.</p></div></div></div><img class="vector-ugApJD vector" data-id="4865:664008" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/vector.svg" alt="Vector"><div class="group-47347-ugApJD" data-id="4850:609406"><p class="heading-h1-WzX7gI heading-h1" data-id="4850:609407">Une expérience exclusive chez les professionels&nbsp;&nbsp;équipés Carden</p></div><div class="frame-1000005327-Ug8Kk3 frame-1000005327" data-id="4850:609414"><div class="rectangle-5279-1ZY93i" data-id="4850:609415"></div><div class="header-v2-1ZY93i" data-id="4850:609416"><div class="primary-button-EPbPyK" data-id="4850:609417"></div></div><div class="group-47301-1ZY93i" data-id="4850:609431"><div class="frame-1000005053-PXb7qh" data-id="4850:609432"><h1 class="heading-h1-VAdnOx heading-h1" data-id="4850:609433">Rapidité, flexibilité<br>&amp; fidélité</h1><div class="frame-1000005052-VAdnOx" data-id="4850:609434"><p class="paragraph-rRzJRC paragraph text-single300regular" data-id="4850:609435">Avec Carden prendre soin de vous, <br>n’a jamais été aussi simple</p></div></div></div><img class="google-play-badge-logo-svgrepo-com-1ZY93i" data-id="4850:609436" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/google-play-badge-logo-svgrepo-com.svg" alt="google-play-badge-logo-svgrepo-com"><img class="download-on-the-app-1ZY93i" data-id="4850:609449" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/download-on-the-app-store-apple-logo-svgrepo-com.svg" alt="download-on-the-app-store-apple-logo-svgrepo-com"><img class="frame-1000005056-1ZY93i" data-id="4850:609460" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/frame-1000005056.svg" alt="Frame 1000005056"><img class="mockuuups-iphone-13-1ZY93i mockuuups-iphone-13" data-id="4850:609468" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/mockuuups-iphone-13-pro-mockup-perspective-left-3-4.png" alt="mockuuups-iphone-13-pro-mockup-perspective-left-3 4"><img class="mockuuups-iphone-13-U2Tmaw mockuuups-iphone-13" data-id="4850:609469" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/mockuuups-iphone-13-pro-mockup-perspective-right-3-1.png" alt="mockuuups-iphone-13-pro-mockup-perspective-right-3 1"></div><div class="hero-heading-left" data-id="4850:609470"><div class="container" data-id="4850:609471"><div class="column-FajlaM column" data-id="4850:609472"><div class="content" data-id="4850:609473"><p class="h1-title-copy-goes-here-be-awesome inter-bold-black-56px" data-id="4850:609474">Title Copy Goes Here Be Awesome</p><p class="p-lorem-ipsum-dolor inter-normal-log-cabin-18px" data-id="4850:609475">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p></div><div class="actions" data-id="4850:609476"><div class="button" data-id="4850:609477"><div class="get-started inter-medium-white-12px" data-id="4850:609478">GET STARTED</div></div></div></div><div class="column-tokyKO column" data-id="4850:609479"><div class="image-wrapper" data-id="4850:609480"><div class="image" data-id="4850:609481-88dc0f2e-c56c-4b1e-84e5-c9cc48147ce3"></div></div></div></div></div><div class="hero-heading-left" data-id="4850:609482"><div class="container" data-id="4850:609483"><div class="column-kTvAmu column" data-id="4850:609484"><div class="content" data-id="4850:609485"><p class="h1-title-copy-goes-here-be-awesome inter-bold-black-56px" data-id="4850:609486">Title Copy Goes Here Be Awesome</p><p class="p-lorem-ipsum-dolor inter-normal-log-cabin-18px" data-id="4850:609487">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p></div><div class="actions" data-id="4850:609488"><div class="button" data-id="4850:609489"><div class="get-started inter-medium-white-12px" data-id="4850:609490">GET STARTED</div></div></div></div><div class="column-wxTGiK column" data-id="4850:609491"><div class="image-wrapper" data-id="4850:609492"><div class="image" data-id="4850:609493-67685c0e-ea5d-473a-9d0e-b7b98c0911c5"></div></div></div></div></div><div class="group-1000005327-ugApJD" data-id="4852:609933"><div class="group-1000005315-0PkQ3r" data-id="4850:608116"><div class="footer-v3-2Vati7" data-id="4850:608117"><div class="rectangle-5300-E6w3V8" data-id="I4850:608117;3650:36751"></div></div><div class="frame-1000005054-2Vati7" data-id="4850:608118"><div class="group-1000002227-0ItCsh" data-id="4850:608119"><div class="carden-p2r6aB valign-text-middle" data-id="4850:608120">Carden</div><div class="group-1000002227-p2r6aB" data-id="4850:608121"><div class="rectangle-5627-p0H3xw" data-id="4850:608122"></div><div class="rectangle-5628-p0H3xw" data-id="4850:608123"></div><div class="rectangle-5629-p0H3xw" data-id="4850:608124"></div></div></div></div></div></div><div class="new-page" data-id="4850:609509"></div><div class="new-page" data-id="4850:609510"></div><div class="new-page" data-id="4850:609511"></div><div class="new-page" data-id="4850:609512"></div><div class="new-page" data-id="4850:609513"></div><div class="master-primary-button-ugApJD master-primary-button" data-id="4865:736407"><div class="button-text onest-bold-white-18-5px" data-id="I4865:736407;13:15015">Téléchargez pour Android</div></div><div class="master-primary-button-Ug8Kk3 master-primary-button" data-id="4865:736408"><div class="button-text onest-bold-white-18-5px" data-id="I4865:736408;13:15015">Téléchargez pour iPhone</div></div><div class="master-primary-button-s4GB8V master-primary-button" data-id="4865:736409"><div class="button-text onest-bold-white-18-5px" data-id="I4865:736409;13:15015">Téléchargez pour Android</div></div><div class="master-primary-button-Gyxd2U master-primary-button" data-id="4865:736410"><div class="button-text onest-bold-white-18-5px" data-id="I4865:736410;13:15015">Téléchargez pour iPhone</div></div><a href="mailto:contact@carden.app" target="_blank"><div class="contactcardenapp-ugApJD valign-text-middle onest-extra-extra-bold-blue-14px" data-id="4865:736411">contact@carden.app</div></a><div class="politique-de-confidentialit-ugApJD onest-regular-normal-white-12px" data-id="4865:736412">Politique de confidentialité</div><div class="conditions-gnrales-dutilisation-ugApJD onest-regular-normal-white-12px" data-id="4865:736413">Conditions générales d’utilisation</div></div></div><div class="container-center-horizontal"><div class="home-x-onest-2 screen " data-id="4849:514558"><div class="group-1000005295-yOGX3D" data-id="4849:514560"><div class="group-1000004927-6hxY0I group-1000004927" data-id="4849:514561"><div class="rectangle-5310-xvFppP rectangle-5310" data-id="4849:514562"></div></div><div class="group-1000004885-6hxY0I group-1000004885" data-id="4849:514563"><div class="group-43985-WrHBxn group-43985" data-id="4849:514564"><p class="heading-h1-6Mnhvn heading-h1 paragraphdefault" data-id="4849:514565">“Porttitor donec id turpis egestas facilisis nunc cursus nec risus egetole aenean adipiscing in eget convallis cras ornare risus purus eros neque vel mattis et nibh.</p></div></div><div class="group-1000004927-1Ya0Bk group-1000004927" data-id="4849:514566"><div class="group-1000004884-3lN3Tw group-1000004884" data-id="4849:514567"><div class="paragraph-tOK0ak paragraph paragraphdefault" data-id="4849:514568">Finance manager</div><div class="paragraph-mRzxbX paragraph headingstypography-size-5" data-id="4849:514569">John Carter</div></div><img class="avatar-circle-3lN3Tw avatar-circle" data-id="4849:514570" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-7@2x.png" alt="Avatar Circle"></div><img class="logo-facebook-6hxY0I" data-id="4849:514576" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-7@2x.png" alt="Logo/Facebook"></div><div class="group-1000005299-yOGX3D" data-id="4849:514578"><div class="group-1000004927-ffEQ7u group-1000004927" data-id="4849:514579"><div class="rectangle-5310-TxkqPR rectangle-5310" data-id="4849:514580"></div></div><div class="group-1000004885-ffEQ7u group-1000004885" data-id="4849:514581"><div class="group-43985-R2OGxt group-43985" data-id="4849:514582"><p class="heading-h1-u2Euyp heading-h1 paragraphdefault" data-id="4849:514583">“Porttitor donec id turpis egestas facilisis nunc cursus nec risus egetole aenean adipiscing in eget convallis cras ornare risus purus eros neque vel mattis et nibh.</p></div></div><div class="group-1000004927-xoxZZr group-1000004927" data-id="4849:514584"><div class="group-1000004884-29ZHf1 group-1000004884" data-id="4849:514585"><div class="paragraph-soofF5 paragraph paragraphdefault" data-id="4849:514586">VP of Finance</div><div class="paragraph-7mvEym paragraph headingstypography-size-5" data-id="4849:514587">Annie Scott</div></div><img class="avatar-circle-29ZHf1 avatar-circle" data-id="4849:514588" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-7@2x.png" alt="Avatar Circle"></div><img class="group-1000004893-ffEQ7u" data-id="4849:514594" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-7@2x.png" alt="Group 1000004893"></div><div class="group-1000005054-yOGX3D" data-id="4849:514633"><div class="group-1000005053-Vdu9Ks" data-id="4849:514634"><p class="vous-serez-recontacter-par-ONYycy" data-id="4849:514635">Vous serez recontacter par :</p></div></div><div class="frame-1000005286-yOGX3D frame-1000005286" data-id="4849:514636"><div class="group-1000002226-CGurrt" data-id="4849:514637"><div class="rectangle-5627-v0M8Ue" data-id="4849:514638"></div><div class="rectangle-5628-v0M8Ue" data-id="4849:514639"></div><div class="rectangle-5629-v0M8Ue" data-id="4849:514640"></div></div></div><div class="frame-1000005286-xqsPQX frame-1000005286" data-id="4849:514676"><div class="ellipse-673-yTPiaq ellipse-673" data-id="4849:514677"></div></div><div class="group-1000005319-yOGX3D" data-id="4849:515798"><div class="group-1000005318-TOZyBA" data-id="4849:515799"><div class="group-1000005052-o9IV3T" data-id="4849:515800"><div class="group-1000005050-wAIN58" data-id="4849:515801"><div class="rectangle-6989-IbYc6j" data-id="4849:515802"></div></div></div><div class="group-39468-o9IV3T" data-id="4849:515803"><div class="group-39467-xC6BKZ" data-id="4849:515804"><img class="avatar-circle-YVDGh9 avatar-circle" data-id="4849:515805" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-7@2x.png" alt="Avatar Circle"></div><img class="mask-group-xC6BKZ mask-group" data-id="4849:515806" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/space-black-7@2x.png" alt="Mask group"></div></div><div class="risvan-asif-co-founder-ceo-TOZyBA valign-text-middle" data-id="4849:515810"><span><span class="span0-wxTXXm">RISVAN ASIF<br></span><span class="span1-wxTXXm">co-founder &amp; CEO</span></span></div></div><div class="frame-1000005295-yOGX3D frame-1000005295" data-id="4849:515895"><div class="ellipse-673-1s9aIV ellipse-673" data-id="4849:515896"></div></div><div class="rectangle-5279-yOGX3D" data-id="4849:515898"></div><div class="header-v2-yOGX3D" data-id="4849:515899"><div class="primary-button-HmXyAq" data-id="4849:515900"></div></div><div class="frame-1000005053-yOGX3D" data-id="4849:515915"><div class="heading-h1-dYIJBx heading-h1" data-id="4849:515916">Rapidité, flexibilité<br>&amp; fidélité</div><div class="frame-1000005052-dYIJBx" data-id="4849:515917"><p class="paragraph-b5p8I7 paragraph" data-id="4849:515918">Prendre soin de vous, <br>n’a jamais été aussi simple</p></div></div><img class="google-play-badge-logo-svgrepo-com-yOGX3D google-play-badge-logo-svgrepo-com" data-id="4849:515919" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/google-play-badge-logo-svgrepo-com-1.svg" alt="google-play-badge-logo-svgrepo-com"><img class="download-on-the-app-yOGX3D" data-id="4849:515932" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/download-on-the-app-store-apple-logo-svgrepo-com-1.svg" alt="download-on-the-app-store-apple-logo-svgrepo-com"><img class="frame-1000005056-yOGX3D" data-id="4849:515943" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/frame-1000005056-1.svg" alt="Frame 1000005056"><img class="mockuuups-iphone-13-yOGX3D mockuuups-iphone-13" data-id="4849:515951" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/mockuuups-iphone-13-pro-mockup-perspective-left-3-4-1@2x.png" alt="mockuuups-iphone-13-pro-mockup-perspective-left-3 4"><img class="mockuuups-iphone-13-xqsPQX mockuuups-iphone-13" data-id="4849:515952" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/mockuuups-iphone-13-pro-mockup-perspective-right-3-1-1@2x.png" alt="mockuuups-iphone-13-pro-mockup-perspective-right-3 1"><div class="hero-heading-left" data-id="4849:515953"><div class="container" data-id="4849:515954"><div class="column-64xxHl column" data-id="4849:515955"><div class="content" data-id="4849:515956"><h1 class="h1-title-copy-goes-here-be-awesome inter-bold-black-56px" data-id="4849:515957">Title Copy Goes Here Be Awesome</h1><p class="p-lorem-ipsum-dolor inter-normal-log-cabin-18px" data-id="4849:515958">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p></div><div class="actions" data-id="4849:515959"><div class="button" data-id="4849:515960"><div class="get-started inter-medium-white-12px" data-id="4849:515961">GET STARTED</div></div></div></div><div class="column-3PxCkx column" data-id="4849:515962"><div class="image-wrapper" data-id="4849:515963"><div class="image" data-id="4849:515964-a9f4bb4a-dbc3-43af-b400-c8672d376d79"></div></div></div></div></div><div class="hero-heading-left" data-id="4849:515965"><div class="container" data-id="4849:515966"><div class="column-WxAoCj column" data-id="4849:515967"><div class="content" data-id="4849:515968"><p class="h1-title-copy-goes-here-be-awesome inter-bold-black-56px" data-id="4849:515969">Title Copy Goes Here Be Awesome</p><p class="p-lorem-ipsum-dolor inter-normal-log-cabin-18px" data-id="4849:515970">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p></div><div class="actions" data-id="4849:515971"><div class="button" data-id="4849:515972"><div class="get-started inter-medium-white-12px" data-id="4849:515973">GET STARTED</div></div></div></div><div class="column-ij9C6w column" data-id="4849:515974"><div class="image-wrapper" data-id="4849:515975"><div class="image" data-id="4849:515976-fa86084c-12cd-46d6-b481-98268d743577"></div></div></div></div></div><div class="master-primary-button-yOGX3D master-primary-button" data-id="4849:515991"><div class="button-text-JodHI1 button-text" data-id="I4849:515991;13:15015">Téléchargez l’application</div></div><div class="group-1000005315-yOGX3D" data-id="4861:616480"><div class="footer-v3" data-id="4861:616481"><div class="rectangle-5300-ZgagGF rectangle-5300" data-id="4861:616482"></div><div class="group-1000002227-ZgagGF group-1000002227" data-id="4861:616485"><div class="rectangle-5627-BudKk4" data-id="4861:616486"></div><div class="rectangle-5628-BudKk4" data-id="4861:616487"></div><div class="rectangle-5629-BudKk4" data-id="4861:616488"></div></div><a href="mailto:contact@carden.app" target="_blank"><div class="contactcardenapp-ZgagGF valign-text-middle contactcardenapp onest-extra-extra-bold-blue-14px" data-id="4865:670975">contact@carden.app</div></a></div><div class="frame-1000005054" data-id="4861:616489"><div class="group-1000002227-tDSTk0 group-1000002227" data-id="4861:616490"><div class="carden valign-text-middle" data-id="4861:616491">Carden</div></div><img class="google-play-badge-logo-svgrepo-com-tDSTk0 google-play-badge-logo-svgrepo-com" data-id="4861:616492" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/google-play-badge-logo-svgrepo-com-2.svg" alt="google-play-badge-logo-svgrepo-com"></div></div><div class="group-1000005321-yOGX3D" data-id="4865:670976"><div class="footer-v3" data-id="4865:670977"><div class="rectangle-5300-34gPlF rectangle-5300" data-id="4865:670978"></div><div class="group-1000002227-34gPlF group-1000002227" data-id="4865:670981"><div class="rectangle-5627-Vd1dBx" data-id="4865:670982"></div><div class="rectangle-5628-Vd1dBx" data-id="4865:670983"></div><div class="rectangle-5629-Vd1dBx" data-id="4865:670984"></div></div><a href="mailto:contact@carden.app" target="_blank"><div class="contactcardenapp-34gPlF valign-text-middle contactcardenapp onest-extra-extra-bold-blue-14px" data-id="4865:670985">contact@carden.app</div></a><div class="politique-de-confidentialit-34gPlF onest-regular-normal-white-12px" data-id="4865:671013">Politique de confidentialité</div><div class="conditions-gnrales-dutilisation-34gPlF onest-regular-normal-white-12px" data-id="4865:671014">Conditions générales d’utilisation</div></div><div class="frame-1000005054" data-id="4865:670986"><div class="group-1000002227-cIuSZU group-1000002227" data-id="4865:670987"><div class="carden valign-text-middle" data-id="4865:670988">Carden</div></div><img class="google-play-badge-logo-svgrepo-com-cIuSZU google-play-badge-logo-svgrepo-com" data-id="4865:670989" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6bdb240ff550876c3598/img/google-play-badge-logo-svgrepo-com-5.svg" alt="google-play-badge-logo-svgrepo-com"></div></div><div class="frame-1000005302-yOGX3D" data-id="4861:616515"><div class="frame-1000005300-1xerOa" data-id="4861:616516"><div class="rectangle-7108-WiwDy0 rectangle-7108" data-id="4861:616517"></div><div class="heading-h1-WiwDy0 heading-h1" data-id="4861:616518">Visibilité en temps réel</div><p class="ouvert-ou-ferm-dispo-WiwDy0 onest-regular-normal-dove-gray-14px" data-id="4861:616519">Ouvert ou fermé ? Disponible immédiatement ou longue attente.&nbsp;&nbsp;Les informations dont vous avez toujours eu besoin sont maintenant accessiblent en un coup d’oeil.</p><div class="frame-1000005295-WiwDy0 frame-1000005295" data-id="4861:616520"><div class="i-phone-14-pro-oUr3ya i-phone-14-pro" data-id="4861:616521"><img class="wallet-LA7xJW" data-id="4861:616522" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/wallet-1@2x.jpg" alt="WALLET"><img class="space-black-LA7xJW space-black" data-id="4861:616619" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/space-black-5@2x.png" alt="Space Black"></div></div></div></div><div class="frame-1000005301-yOGX3D" data-id="4861:616620"><div class="rectangle-7108-2G075d rectangle-7108" data-id="4861:616621"></div><div class="heading-h1-2G075d heading-h1" data-id="4861:616622">Accès privilégié</div><p class="rservez-les-meilleur-2G075d onest-regular-normal-dove-gray-14px" data-id="4861:616623">Réservez les meilleurs créneaux en fonction de votre disponibilité. Nous avons de la place, même en dernière minute.</p><div class="frame-1000005294-2G075d" data-id="4861:616624"><div class="i-phone-14-pro-JIfnfx i-phone-14-pro" data-id="4861:616625"><img class="preferences-lnMBQ3" data-id="4861:616626" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/preferences-1.png" alt="PREFERENCES"><img class="space-black-lnMBQ3 space-black" data-id="4861:616708" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/space-black-6@2x.png" alt="Space Black"></div></div><div class="group-1000005325-2G075d" data-id="4861:616709"><div class="frame-53-lo6dch frame-53" data-id="4861:616710"><div class="x12h30-qVAKSi" data-id="4861:616711">12h30</div></div><div class="frame-37-lo6dch frame-37" data-id="4861:616712"><div class="thomas-uV808t" data-id="4861:616713">Thomas</div><div class="disponible-uV808t" data-id="4861:616714">Disponible</div></div></div><img class="chris-barber-5-2G075d" data-id="4861:616715" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/chris-barber-5-1@2x.png" alt="Chris-barber 5"><div class="group-1000005323-2G075d" data-id="4861:616716"><div class="frame-54-t5akwK" data-id="4861:616717"></div><div class="list-items-t5akwK" data-id="4861:616718"><div class="frame-37-rtzWIp frame-37" data-id="4861:616719"><div class="jimmy-pzv7TV" data-id="4861:616720">Jimmy</div><p class="x2-pers-dans-la-file-pzv7TV" data-id="4861:616721">2 pers. dans la file</p></div><div class="frame-38-rtzWIp" data-id="4861:616722"><div class="x12h55-vvLTXo" data-id="4861:616723">12h55</div><div class="x55-min-vvLTXo" data-id="4861:616724">55 min</div></div></div></div><img class="image-24-2G075d" data-id="4861:616725" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/image-2-4-1@2x.png" alt="image 2.4"></div><div class="frame-1000005297-yOGX3D" data-id="4861:616726"><div class="rectangle-7108-6nTwOk rectangle-7108" data-id="4861:616727"></div><div class="heading-h1-6nTwOk heading-h1" data-id="4861:616728">Paiement en ligne</div><p class="inutile-davoir-votre-6nTwOk onest-regular-normal-dove-gray-14px" data-id="4861:616729">Inutile d’avoir votre carte bancaire ou du cash. Vous payez directement en ligne et gagnez du temps .</p><div class="group-1000005293-6nTwOk group-1000005293" data-id="4861:616730"><div class="i-phone-14-pro-MJOI6k i-phone-14-pro" data-id="4861:616731"><img class="first-FQIOT7 first" data-id="4861:616732" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/first-3@1.5x.png" alt="First"><img class="space-black-FQIOT7 space-black" data-id="4861:616785" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/space-black-7@2x.png" alt="Space Black"></div></div><img class="group-1000005278-6nTwOk" data-id="4861:616786" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/group-1000005278-1@2x.png" alt="Group 1000005278"></div><div class="frame-1000005296-yOGX3D" data-id="4861:616823"><div class="rectangle-7108-6tB5xU rectangle-7108" data-id="4861:616824"></div><div class="group-1000005293-6tB5xU group-1000005293" data-id="4861:616825"><div class="i-phone-14-pro-ueMg8Z i-phone-14-pro" data-id="4861:616826"><img class="first-O88XSV first" data-id="4861:616827" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6ff9b8af314ea0798f68/img/first-5@1.5x.png" alt="First"><img class="space-black-O88XSV space-black" data-id="4861:617143" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/space-black-8@2x.png" alt="Space Black"></div></div><div class="floating-card-6tB5xU" data-id="4861:617144"><div class="frame-26-qzw8xr" data-id="4861:617145"><div class="x2-personnes-devant-vous-FfbEAh" data-id="4861:617146">2 personnes devant vous</div><div class="environ-35-min-dattente-FfbEAh" data-id="4861:617147">Environ 35 min d’attente</div></div><div class="aperu-de-lactivit-d-hicham-qzw8xr" data-id="4861:617148">Aperçu de l’activité d’Hicham</div><div class="rectangle-qzw8xr rectangle" data-id="4861:617149"></div><div class="group-159-qzw8xr" data-id="4861:617150"><img class="rectangle-avqpc5 rectangle" data-id="4861:617151" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/rectangle-1.svg" alt="Rectangle"><div class="ticket-en-cours-avqpc5 valign-text-middle" data-id="4861:617152">Ticket en cours</div></div><img class="mask-group-qzw8xr mask-group" data-id="4861:617153" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/mask-group-2@2x.png" alt="Mask Group"><img class="x113941-shuffle-queue-qzw8xr" data-id="4861:617157" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64ce74d72e387ee2691c01be/img/113941-shuffle-queue-lottie-json-animation-5.gif" alt="113941-shuffle-queue-lottie-json-animation 5"></div><div class="heading-h1-6tB5xU heading-h1" data-id="4861:617158">Horaire intelligent</div><p class="votre-horaire-se-met-6tB5xU onest-regular-normal-dove-gray-14px" data-id="4861:617159">Votre horaire se met à jour, vous recevez des notifications intelligentes pour vous prévenir de ce qui ce passe en salon.</p></div><div class="frame-1000005058-yOGX3D" data-id="4861:617160"><div class="rectangle-7108-QPtMai rectangle-7108" data-id="4861:617161"></div><div class="heading-h1-QPtMai heading-h1" data-id="4861:617162">Programme de fidélité</div><img class="adam-winger-k-y0-c-mi-z-fo-q-unsplash-2-QPtMai" data-id="4861:617163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/adam-winger-k-y0cmizfoq-unsplash-2-1@2x.png" alt="adam-winger-K-Y0CMiZFoQ-unsplash 2"><img class="group-1000005279-QPtMai" data-id="4861:617164" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/group-1000005279-1@2x.png" alt="Group 1000005279"><div class="list-itemssearch-results-QPtMai" data-id="4861:617192"><div class="frame-51-CeSvde" data-id="4861:617193"></div><div class="frame-52-CeSvde" data-id="4861:617194"></div><div class="frame-53-CeSvde frame-53" data-id="4861:617195"><img class="group-177-sKFVTX" data-id="4861:617196" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/group-177-1@2x.png" alt="Group 177"><div class="group-40085-sKFVTX" data-id="4861:617201"><div class="accroche-gkKElF valign-text-middle" data-id="4861:617202">DÉJA PAYÉ</div></div><img class="chevron-right-sKFVTX" data-id="4861:617203" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/chevron-right-1.svg" alt="chevron-right"><div class="n202-sKFVTX" data-id="4861:617205">n°202</div><div class="x200-pts-sKFVTX" data-id="4861:617206">+ 200 pts</div><div class="rectangle-sKFVTX rectangle" data-id="4861:617207"></div><img class="vector-sKFVTX vector" data-id="4861:617208" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/vector-1.svg" alt="Vector"></div><div class="frame-37-CeSvde frame-37" data-id="4861:617209"><div class="ticket-pris-le-2302-JDwJ00" data-id="4861:617210">Ticket pris le 23/02</div></div></div><p class="votre-fidlit-est-rco-QPtMai onest-regular-normal-dove-gray-14px" data-id="4861:617211">Votre fidélité est récompensé, vous cumulez des points et bénéficiez d’avantages exclusifs en réservant en ligne.</p></div><div class="group-1000005320-yOGX3D" data-id="4861:617212"><div class="rectangle-5627-8npw4o" data-id="4861:617213"></div><div class="rectangle-5628-8npw4o" data-id="4861:617214"></div><div class="rectangle-5629-8npw4o" data-id="4861:617215"></div></div><div class="frame-1000005327-yOGX3D" data-id="4861:617216"><div class="group-1000005321-4fJsrk" data-id="4861:617217"><div class="group-47286-3qogIP" data-id="4861:617218"><p class="paragraph-oE227B paragraph text-single100regular" data-id="4861:617219">Votre professionnel préféré vous à invité sur l’application Carden, <br>découvrez les avantages exclusifs en téléchargeant l’application.</p></div></div></div><p class="heading-h1-yOGX3D heading-h1" data-id="4861:617220">Rejoignez le club et bénéficiez de l’expérience Carden</p><div class="frame-1000005284-yOGX3D" data-id="4861:617221"><div class="rectangle-7108-B4PbOQ rectangle-7108" data-id="4861:617222"></div><div class="heading-h1-B4PbOQ heading-h1" data-id="4861:617223">Réservation Express</div><p class="nous-identifions-vos-B4PbOQ onest-regular-normal-dove-gray-14px" data-id="4861:617224">Nous identifions vos habitudes pour vous permettre de réserver en accéléré. Tout va plus vite avec Carden !</p><div class="group-1000005293-B4PbOQ group-1000005293" data-id="4861:617225"><div class="i-phone-14-pro-Y1c70n i-phone-14-pro" data-id="4861:617226"><img class="first-wCN4U0 first" data-id="4861:617227" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6cc6e60e3fcf206048ea/img/first-4@1.5x.png" alt="First"><img class="space-black-wCN4U0 space-black" data-id="4861:617643" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf5d862e387ee2691c01fb/img/space-black-9@2x.png" alt="Space Black"></div></div></div><img class="vector-yOGX3D vector" data-id="4865:670938" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6bdb240ff550876c3598/img/vector-6.svg" alt="Vector"><div class="master-primary-button-xqsPQX master-primary-button" data-id="4865:718320"><div class="button-text-kbowhV button-text headingstypography-size-6" data-id="4865:718322">Téléchargez pour iPhone</div></div><div class="master-primary-button-SNJYsi master-primary-button" data-id="4865:718324"><div class="button-text-qsspFr button-text headingstypography-size-6" data-id="4865:718326">Téléchargez pour Android</div></div><p class="heading-h1-xqsPQX heading-h1" data-id="4865:670940">Une expérience<br>exclusive chez les professionnels<br> équipés de Carden</p><p class="heading-h1-SNJYsi heading-h1" data-id="4865:670949">Ce qu’ils disent <br>de nous sur Google</p><div class="frame-1000005288-yOGX3D" data-id="4865:670950"><div class="group-1000005294-BIardS" data-id="4865:670951"><div class="group-1000005143-GAgx5h group-1000005143" data-id="4865:670952"><div class="group-1000004927-fsBJ4v group-1000004927" data-id="4865:670953"><div class="rectangle-5310-xEv3TN rectangle-5310" data-id="4865:670954"></div></div><div class="group-1000004885-fsBJ4v group-1000004885" data-id="4865:670955"><div class="group-43985-9jYS2I group-43985" data-id="4865:670956"><p class="heading-h1-dLIH1L heading-h1" data-id="4865:670957">“Carden a révolutionné la manière dont je gère mes rendez-vous avec des professionnels. C&#39;est simple, rapide et efficace !”</p></div></div><div class="group-1000004927-HN9aST group-1000004927" data-id="4865:670958"><div class="group-1000004884-EWvmLY group-1000004884" data-id="4865:670959"><div class="paragraph-yxuxy7 paragraph" data-id="4865:670960">Marie87</div></div><img class="person-svgrepo-com-1-EWvmLY person-svgrepo-com-1" data-id="4865:670961" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/person-svgrepo-com-1-2.svg" alt="person-svgrepo-com 1"></div></div></div><div class="group-1000005316-BIardS" data-id="4865:670963"><div class="group-1000005143-buoWDY group-1000005143" data-id="4865:670964"><div class="group-1000004927-hmiqBu group-1000004927" data-id="4865:670965"><div class="rectangle-5310-xpAcG4 rectangle-5310" data-id="4865:670966"></div></div><div class="group-1000004885-hmiqBu group-1000004885" data-id="4865:670967"><div class="group-43985-RZqWL7 group-43985" data-id="4865:670968"><p class="heading-h1-DQBC7l heading-h1" data-id="4865:670969">“Je recommande vivement Carden ! L&#39;application m&#39;a permis de gagner énormément de temps et de réserver en dernière minute sans attente sur place”</p></div></div><div class="group-1000004927-0xPMfX group-1000004927" data-id="4865:670970"><div class="group-1000004884-1ItaxD group-1000004884" data-id="4865:670971"><div class="paragraph-5TRDVY paragraph" data-id="4865:670972">Paulopaul</div></div><img class="person-svgrepo-com-1-1ItaxD person-svgrepo-com-1" data-id="4865:670973" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/64ce733b74252cafed7b5f01/releases/64cf6a048b5cfc0c3eee5d7b/img/person-svgrepo-com-1-3.svg" alt="person-svgrepo-com 1"></div></div></div></div><div class="master-primary-button-mcFYnQ master-primary-button" data-id="4865:709267"><div class="button-text-bWtvTM button-text headingstypography-size-6" data-id="4865:709269">Téléchargez pour iPhone</div></div><div class="master-primary-button-jxevD4 master-primary-button" data-id="4865:712257"><div class="button-text-FI8uGQ button-text headingstypography-size-6" data-id="4865:712259">Téléchargez pour Android</div></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
